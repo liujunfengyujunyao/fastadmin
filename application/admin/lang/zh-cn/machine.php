@@ -1,0 +1,32 @@
+<?php
+
+return [
+    'Type_id'              => '1口红 2福袋 3售货机 4新版福袋机 ',
+    'Status'               => '1=未被删除,0=已被删除',
+    'Version_id'           => '贩卖机游戏版本',
+    'Odds'                 => '游戏赔率',
+    'Game_price'           => '进行一次游戏的价格',
+    'Update_id'            => '要进行升级的版本id',
+    'Is_online'            => '是否在线 0离线 1在线',
+    'Partner_id'           => '配货人员',
+    'Is_same_odds'         => '是否所有格子采用相同赔率',
+    'Address'              => '具体地址',
+    'Position_lng'         => '经度',
+    'Position_lat'         => '纬度',
+    'Priority'             => '以设备0/平台1设置为准',
+    'Offline_game_price'   => '线下游戏价格',
+    'Goods_price'          => '平台统一商品价格',
+    'Offline_goods_prices' => '设备统一商品价格',
+    'Brief'                => '描述',
+    'Location'             => '仓位列表',
+    'Type_name'            => '机器类型福袋,口红,娃娃机',
+    'Group_id'             => '群组id',
+    'Uuid'                 => '唯一标识',
+    'Px'                   => '屏幕比例',
+    'Model'                => '0预生产模式 1工厂模式 2中间模式 4运行模式',
+    'Auto_update'          => '自动升级信息',
+    'Multibuy'             => '优惠政策',
+    'Last_online'          => '最后上线时间',
+    'Last_offline'         => '最后离线时间',
+    'Is_disable'           => '是否禁用告白功能'
+];

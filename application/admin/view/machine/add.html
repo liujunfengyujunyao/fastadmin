@@ -1,0 +1,256 @@
+<form id="add-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('User_id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-user_id" data-rule="required" data-source="user/user/index" data-field="nickname" class="form-control selectpage" name="row[user_id]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Machine_name')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-machine_name" class="form-control" name="row[machine_name]" type="text">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Type_id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-type_id" data-rule="required" data-source="type/index" class="form-control selectpage" name="row[type_id]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Phone')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-phone" class="form-control" name="row[phone]" type="text">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Addtime')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-addtime" data-rule="required" class="form-control datetimepicker" data-date-format="YYYY-MM-DD HH:mm:ss" data-use-current="true" name="row[addtime]" type="text" value="{:date('Y-m-d H:i:s')}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Status')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-status" data-rule="required" class="form-control" name="row[status]" type="number" value="1">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Version_id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-version_id" data-rule="required" data-source="version/index" class="form-control selectpage" name="row[version_id]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Odds')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-odds" data-rule="required" class="form-control" name="row[odds]" type="number" value="30">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Game_price')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-game_price" data-rule="required" class="form-control" name="row[game_price]" type="number" value="10">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Update_id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-update_id" data-rule="required" data-source="update/index" class="form-control selectpage" name="row[update_id]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Is_online')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-is_online" data-rule="required" class="form-control" name="row[is_online]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Province_id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-province_id" data-rule="required" data-source="province/index" class="form-control selectpage" name="row[province_id]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('City_id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-city_id" data-rule="required" data-source="city/index" class="form-control selectpage" name="row[city_id]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('District_id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-district_id" data-rule="required" data-source="district/index" class="form-control selectpage" name="row[district_id]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Partner_id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-partner_id" data-rule="required" data-source="partner/index" class="form-control selectpage" name="row[partner_id]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Sn')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-sn" data-rule="required" class="form-control" name="row[sn]" type="text">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Is_same_odds')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-is_same_odds" data-rule="required" class="form-control" name="row[is_same_odds]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Address')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-address" class="form-control" name="row[address]" type="text">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Position_lng')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-position_lng" class="form-control" name="row[position_lng]" type="text">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Position_lat')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-position_lat" class="form-control" name="row[position_lat]" type="text">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Client_id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-client_id" data-rule="required" data-source="client/index" class="form-control selectpage" name="row[client_id]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Priority')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-priority" class="form-control" name="row[priority]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Offline_game_price')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-offline_game_price" data-rule="required" class="form-control" step="0.01" name="row[offline_game_price]" type="number" value="0.00">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Goods_price')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-goods_price" data-rule="required" class="form-control" name="row[goods_price]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Offline_goods_prices')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-offline_goods_prices" data-rule="required" class="form-control" step="0.01" name="row[offline_goods_prices]" type="number" value="0.00">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Brief')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <textarea id="c-brief" class="form-control " rows="5" name="row[brief]" cols="50"></textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Offline_odds')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-offline_odds" data-rule="required" class="form-control" name="row[offline_odds]" type="number" value="30">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Location')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <textarea id="c-location" class="form-control " rows="5" name="row[location]" cols="50"></textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Type_name')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-type_name" class="form-control" name="row[type_name]" type="text">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Group_id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-group_id" data-rule="required" data-source="group/index" class="form-control selectpage" name="row[group_id]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Uuid')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-uuid" data-rule="required" class="form-control" name="row[uuid]" type="text">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Px')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-px" data-rule="required" class="form-control" name="row[px]" type="text">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Access_token')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-access_token" data-rule="required" class="form-control" name="row[access_token]" type="text">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Model')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-model" data-rule="required" class="form-control" name="row[model]" type="number" value="1">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('New_pos_lng')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-new_pos_lng" class="form-control" name="row[new_pos_lng]" type="text">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('New_pos_lat')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-new_pos_lat" class="form-control" name="row[new_pos_lat]" type="text">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Auto_update')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-auto_update" class="form-control" name="row[auto_update]" type="text">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Multibuy')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-multibuy" class="form-control" name="row[multibuy]" type="text">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Last_online')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-last_online" class="form-control datetimepicker" data-date-format="YYYY-MM-DD HH:mm:ss" data-use-current="true" name="row[last_online]" type="text" value="{:date('Y-m-d H:i:s')}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Last_offline')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-last_offline" class="form-control datetimepicker" data-date-format="YYYY-MM-DD HH:mm:ss" data-use-current="true" name="row[last_offline]" type="text" value="{:date('Y-m-d H:i:s')}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Is_disable')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-is_disable" class="form-control" name="row[is_disable]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group layer-footer">
+        <label class="control-label col-xs-12 col-sm-2"></label>
+        <div class="col-xs-12 col-sm-8">
+            <button type="submit" class="btn btn-success btn-embossed disabled">{:__('OK')}</button>
+            <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
+        </div>
+    </div>
+</form>
