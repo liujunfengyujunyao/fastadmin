@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:70:"D:\WWW\fastadmin\public/../application/admin\view\pay\order\index.html";i:1558064625;s:59:"D:\WWW\fastadmin\application\admin\view\layout\default.html";i:1557482263;s:56:"D:\WWW\fastadmin\application\admin\view\common\meta.html";i:1557482263;s:58:"D:\WWW\fastadmin\application\admin\view\common\script.html";i:1557482263;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:70:"D:\WWW\fastadmin\public/../application/admin\view\pay\order\index.html";i:1558506611;s:59:"D:\WWW\fastadmin\application\admin\view\layout\default.html";i:1557482263;s:56:"D:\WWW\fastadmin\application\admin\view\common\meta.html";i:1557482263;s:58:"D:\WWW\fastadmin\application\admin\view\common\script.html";i:1557482263;}*/ ?>
 <!DOCTYPE html>
 <html lang="<?php echo $config['language']; ?>">
     <head>
@@ -72,11 +72,13 @@
                             </ul>
                         </div>
 
-                        
+                        <!--<a data-url="pay/order/refund" href="javascript:;"  class="spec_add_btn" style="padding:0;" data-title="添加" >添加</a>-->
                     </div>
+                    <!--$auth->check()为检测权限  是否需要检测 需要检测就新增一条-->
                     <table id="table" class="table table-striped table-bordered table-hover table-nowrap"
-                           data-operate-edit="<?php echo $auth->check('pay/order/edit'); ?>" 
-                           data-operate-del="<?php echo $auth->check('pay/order/del'); ?>" 
+                           data-operate-edit="<?php echo $auth->check('pay/order/edit'); ?>"
+                           data-operate-del="<?php echo $auth->check('pay/order/del'); ?>"
+                           data-operate-refund="<?php echo $auth->check('pay/order/refund'); ?>"
                            width="100%">
                     </table>
                 </div>

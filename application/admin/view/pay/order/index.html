@@ -20,11 +20,13 @@
                             </ul>
                         </div>
 
-                        
+                        <!--<a data-url="pay/order/refund" href="javascript:;"  class="spec_add_btn" style="padding:0;" data-title="添加" >添加</a>-->
                     </div>
+                    <!--$auth->check()为检测权限  是否需要检测 需要检测就新增一条-->
                     <table id="table" class="table table-striped table-bordered table-hover table-nowrap"
-                           data-operate-edit="{:$auth->check('pay/order/edit')}" 
-                           data-operate-del="{:$auth->check('pay/order/del')}" 
+                           data-operate-edit="{:$auth->check('pay/order/edit')}"
+                           data-operate-del="{:$auth->check('pay/order/del')}"
+                           data-operate-refund="{:$auth->check('pay/order/refund')}"
                            width="100%">
                     </table>
                 </div>

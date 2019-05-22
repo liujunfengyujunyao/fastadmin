@@ -3,13 +3,13 @@
     <div class="form-group">
         <label class="control-label col-xs-12 col-sm-2">{:__('Order_id')}:</label>
         <div class="col-xs-12 col-sm-8">
-            <input id="c-order_id" data-rule="required" data-source="order/index" class="form-control selectpage" name="row[order_id]" type="text" value="{$row.order_id|htmlentities}">
+            <input id="c-order_id" data-rule="required" class="form-control" name="row[order_id]" type="text" value="{$row.order_id|htmlentities}">
         </div>
     </div>
     <div class="form-group">
         <label class="control-label col-xs-12 col-sm-2">{:__('Unique_order_id')}:</label>
         <div class="col-xs-12 col-sm-8">
-            <input id="c-unique_order_id" data-rule="required" data-source="unique/order/index" class="form-control selectpage" name="row[unique_order_id]" type="text" value="{$row.unique_order_id|htmlentities}">
+            <input id="c-unique_order_id" data-rule="required" class="form-control" name="row[unique_order_id]" type="text" value="{$row.unique_order_id|htmlentities}">
         </div>
     </div>
     <div class="form-group">
@@ -27,7 +27,13 @@
     <div class="form-group">
         <label class="control-label col-xs-12 col-sm-2">{:__('Type')}:</label>
         <div class="col-xs-12 col-sm-8">
-            <input id="c-type" data-rule="required" class="form-control" name="row[type]" type="number" value="{$row.type|htmlentities}">
+                        
+            <select  id="c-type" data-rule="required" class="form-control selectpicker" name="row[type]">
+                {foreach name="typeList" item="vo"}
+                    <option value="{$key}" {in name="key" value="$row.type"}selected{/in}>{$vo}</option>
+                {/foreach}
+            </select>
+
         </div>
     </div>
     <div class="form-group">
