@@ -163,8 +163,32 @@ class Order extends Backend
         return $this->view->fetch();
     }
 
+   /*
+    拉起支付二维码
+    创建订单*/
+    public function pos()
+    {
+        $data = $this->model->pay(1,0.01,2,'',1);
+        halt($data);
+
+    }
+
     public function test()
     {
+        $url = "http://192.168.1.133/yeepay/api/pay";
+        $data = [
+            'type' => 1,
+//                'amount' => $check['order_amount'],
+            'amount' => 0.01,
+            'goods_name' => "广告",
+            'notify' => "http://liujunfeng.imwork.net/ad/client/notify"
+//                'notify' =>"http://47429ceb.ngrok.io/ad/client/notify"
+        ];
+//            halt($data);
+        $result = json_curl($url, $data);
+            halt($result);
+        $arr = json_decode($result, true);
 
+        halt($arr);
     }
 }

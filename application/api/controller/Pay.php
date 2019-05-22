@@ -9,11 +9,12 @@
 namespace app\api\controller;
 use think\Db;
 use think\Controller;
+use app\common\controller\Backend;
 
 header('Access-Control-Allow-Origin:*');
 header('Access-Control-Allow-Headers: Content-Type,Content-Length,Accept-Encoding,X-Requested-with, Origin');
 
-class Pay extends Controller{
+class Pay extends Backend{
 
 
     public function __construct(){
@@ -119,6 +120,7 @@ class Pay extends Controller{
             return json(['status'=>0,'msg'=>'下单失败']);
         }
     }
+
 
     //回调
     public function callback(){

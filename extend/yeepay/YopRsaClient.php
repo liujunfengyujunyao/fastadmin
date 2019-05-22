@@ -145,7 +145,9 @@ class YopRsaClient
 
     public static function post($methodOrUri, $YopRequest)
     {
+
         $content = YopRsaClient::postString($methodOrUri, $YopRequest);
+        halt($content);
         $response = YopRsaClient::handleRsaResult($YopRequest, $content);
         return $response;
     }
@@ -157,6 +159,7 @@ class YopRsaClient
      */
     public static function postString($methodOrUri, $YopRequest)
     {
+
         $YopRequest->httpMethod = "POST";
         $serverUrl = YopRsaClient::richRequest($methodOrUri, $YopRequest);
         self::SignRsaParameter($methodOrUri, $YopRequest);

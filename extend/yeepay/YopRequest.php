@@ -102,12 +102,12 @@ class YopRequest {
         else{
             $this->serverRoot = $this->config->serverRoot;
         }
-        if(!empty($serverRoot)){
-             $this->serverRoot = $yosServerRoot;
-        }
-        else{
-            $this->serverRoot = $this->config->yosServerRoot;
-        }
+//        if(!empty($serverRoot)){
+//             $this->serverRoot = $yosServerRoot;
+//        }
+//        else{
+//            $this->serverRoot = $this->config->yosServerRoot;
+//        }
     }
 
     public function addParam($key,$values){
