@@ -40,7 +40,8 @@ class Order extends Backend
         $user_id = $_SESSION['think']['admin']['id'];
         $group_id = DB::name('auth_group_access')->where(['uid'=>$user_id])->value('group_id');
         $rule=$group_id==1?"1=1":['user_id'=>$user_id];
-        $ws_user = DB::name('wk_user')->where(['id'=>$user_id])->value('id');
+
+        $wk_user = DB::name('wk_user')->where(['id'=>$user_id])->value('id');
         //当前是否为关联查询
         $this->relationSearch = true;
         //设置过滤方法
@@ -67,14 +68,15 @@ class Order extends Backend
                     ->order($sort, $order)
                     ->limit($offset, $limit)
                     ->select();
+
             foreach ($list as $row) {
-                
+
                 $row->getRelation('wkuser')->visible(['id','type','user_name']);
             }
             $list = collection($list)->toArray();//$list是个对象  转化为数组
-            foreach($list as $key => &$value){
-                $value['last_time'] = $value['update_time']+7200;
-            }
+//            foreach($list as $key => &$value){
+//                $value['last_time'] = $value['update_time']+7200;
+//            }
             $result = array("total" => $total, "rows" => $list);
 
             return json($result);
@@ -166,11 +168,21 @@ class Order extends Backend
    /*
     拉起支付二维码
     创建订单*/
-    public function pos()
+    public function av()
     {
         $data = $this->model->pay(1,0.01,2,'',1);
         halt($data);
 
+    }
+
+    /*
+    拉起支付二维码
+    创建订单*/
+    public function pos()
+    {
+
+        $data = action('api/pay/pay2',['type'=>1,'amount'=>0.01,'user_id'=>2,'goods_name'=>'goods','sn'=>1]);
+        halt($data);
     }
 
     public function test()
