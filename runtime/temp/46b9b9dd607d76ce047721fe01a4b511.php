@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:70:"D:\WWW\fastadmin\public/../application/admin\view\dashboard\index.html";i:1557482263;s:59:"D:\WWW\fastadmin\application\admin\view\layout\default.html";i:1557482263;s:56:"D:\WWW\fastadmin\application\admin\view\common\meta.html";i:1557482263;s:58:"D:\WWW\fastadmin\application\admin\view\common\script.html";i:1557482263;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:70:"D:\WWW\fastadmin\public/../application/admin\view\dashboard\index.html";i:1558604724;s:59:"D:\WWW\fastadmin\application\admin\view\layout\default.html";i:1557482263;s:56:"D:\WWW\fastadmin\application\admin\view\common\meta.html";i:1557482263;s:58:"D:\WWW\fastadmin\application\admin\view\common\script.html";i:1557482263;}*/ ?>
 <!DOCTYPE html>
 <html lang="<?php echo $config['language']; ?>">
     <head>
@@ -220,21 +220,23 @@
             <div class="tab-pane fade active in" id="one">
 
                 <div class="row">
+                    <?php if($group_id <= 2): ?>
                     <div class="col-sm-3 col-xs-6">
                         <div class="sm-st clearfix">
                             <span class="sm-st-icon st-red"><i class="fa fa-users"></i></span>
                             <div class="sm-st-info">
                                 <span><?php echo $totaluser; ?></span>
-                                <?php echo __('Total user'); ?>
+                                <?php echo __('总会员数'); ?>
                             </div>
                         </div>
                     </div>
+                    <?php endif; ?>
                     <div class="col-sm-3 col-xs-6">
                         <div class="sm-st clearfix">
                             <span class="sm-st-icon st-violet"><i class="fa fa-book"></i></span>
                             <div class="sm-st-info">
                                 <span><?php echo $totalviews; ?></span>
-                                <?php echo __('Total view'); ?>
+                                <?php echo __('退款金额'); ?>
                             </div>
                         </div>
                     </div>
@@ -243,7 +245,7 @@
                             <span class="sm-st-icon st-blue"><i class="fa fa-shopping-bag"></i></span>
                             <div class="sm-st-info">
                                 <span><?php echo $totalorder; ?></span>
-                                <?php echo __('Total order'); ?>
+                                <?php echo __('总订单数'); ?>
                             </div>
                         </div>
                     </div>
@@ -252,7 +254,7 @@
                             <span class="sm-st-icon st-green"><i class="fa fa-cny"></i></span>
                             <div class="sm-st-info">
                                 <span><?php echo $totalorderamount; ?></span>
-                                <?php echo __('Total order amount'); ?>
+                                <?php echo __('实收金额'); ?>
                             </div>
                         </div>
                     </div>
@@ -260,57 +262,53 @@
 
                 <div class="row">
                     <div class="col-lg-8">
-                        <div id="echart" style="height:200px;width:100%;"></div>
+
+                        <div id="echart" style="height:250px;width:100%;"></div>
                     </div>
                     <div class="col-lg-4">
                         <div class="card sameheight-item stats">
                             <div class="card-block">
                                 <div class="row row-sm stats-container">
+                                    <?php if($group_id <= 2): ?>
                                     <div class="col-xs-6 stat-col">
                                         <div class="stat-icon"><i class="fa fa-rocket"></i></div>
                                         <div class="stat">
                                             <div class="value"> <?php echo $todayusersignup; ?></div>
-                                            <div class="name"> <?php echo __('Today user signup'); ?></div>
+                                            <div class="name"> <?php echo __('今日注册'); ?></div>
                                         </div>
                                         <div class="progress">
                                             <div class="progress-bar progress-bar-success" style="width: 30%"></div>
                                         </div>
                                     </div>
-                                    <div class="col-xs-6 stat-col">
-                                        <div class="stat-icon"><i class="fa fa-shopping-cart"></i></div>
-                                        <div class="stat">
-                                            <div class="value"> <?php echo $todayuserlogin; ?></div>
-                                            <div class="name"> <?php echo __('Today user login'); ?></div>
-                                        </div>
-                                        <div class="progress">
-                                            <div class="progress-bar progress-bar-success" style="width: 25%"></div>
-                                        </div>
-                                    </div>
+                                    <?php endif; ?>
+
                                     <div class="col-xs-6  stat-col">
                                         <div class="stat-icon"><i class="fa fa-line-chart"></i></div>
                                         <div class="stat">
                                             <div class="value"> <?php echo $todayorder; ?></div>
-                                            <div class="name"> <?php echo __('Today order'); ?></div>
+                                            <div class="name"> <?php echo __('今日订单'); ?></div>
                                         </div>
                                         <div class="progress">
                                             <div class="progress-bar progress-bar-success" style="width: 25%"></div>
                                         </div>
                                     </div>
+                                    <?php if($group_id <= 2): ?>
                                     <div class="col-xs-6  stat-col">
                                         <div class="stat-icon"><i class="fa fa-users"></i></div>
                                         <div class="stat">
                                             <div class="value"> <?php echo $unsettleorder; ?></div>
-                                            <div class="name"> <?php echo __('Unsettle order'); ?></div>
+                                            <div class="name"> <?php echo __('审批成功'); ?></div>
                                         </div>
                                         <div class="progress">
                                             <div class="progress-bar progress-bar-success" style="width: 25%"></div>
                                         </div>
                                     </div>
+                                    <?php endif; ?>
                                     <div class="col-xs-6  stat-col">
                                         <div class="stat-icon"><i class="fa fa-list-alt"></i></div>
                                         <div class="stat">
                                             <div class="value"> <?php echo $sevendnu; ?></div>
-                                            <div class="name"> <?php echo __('Seven dnu'); ?></div>
+                                            <div class="name"> <?php echo __('今日退款'); ?></div>
                                         </div>
                                         <div class="progress">
                                             <div class="progress-bar progress-bar-success" style="width: 25%"></div>
@@ -320,7 +318,7 @@
                                         <div class="stat-icon"><i class="fa fa-dollar"></i></div>
                                         <div class="stat">
                                             <div class="value"> <?php echo $sevendau; ?></div>
-                                            <div class="name"> <?php echo __('Seven dau'); ?></div>
+                                            <div class="name"> <?php echo __('今日实收'); ?></div>
                                         </div>
                                         <div class="progress">
                                             <div class="progress-bar progress-bar-success" style="width: 25%"></div>
@@ -332,221 +330,17 @@
                     </div>
                 </div>
 
-                <div class="row" style="margin-top:15px;">
 
-                    <div class="col-lg-12">
-                    </div>
-                    <div class="col-xs-6 col-md-3">
-                        <div class="panel bg-blue">
-                            <div class="panel-body">
-                                <div class="panel-title">
-                                    <span class="label label-success pull-right"><?php echo __('Real time'); ?></span>
-                                    <h5><?php echo __('Category count'); ?></h5>
-                                </div>
-                                <div class="panel-content">
-                                    <h1 class="no-margins">1234</h1>
-                                    <div class="stat-percent font-bold text-gray"><i class="fa fa-commenting"></i> 1234</div>
-                                    <small><?php echo __('Category count tips'); ?></small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-md-3">
-                        <div class="panel bg-aqua-gradient">
-                            <div class="panel-body">
-                                <div class="ibox-title">
-                                    <span class="label label-info pull-right"><?php echo __('Real time'); ?></span>
-                                    <h5><?php echo __('Attachment count'); ?></h5>
-                                </div>
-                                <div class="ibox-content">
-                                    <h1 class="no-margins">1043</h1>
-                                    <div class="stat-percent font-bold text-gray"><i class="fa fa-modx"></i> 2592</div>
-                                    <small><?php echo __('Attachment count tips'); ?></small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="col-xs-6 col-md-3">
-                        <div class="panel bg-purple-gradient">
-                            <div class="panel-body">
-                                <div class="ibox-title">
-                                    <span class="label label-primary pull-right"><?php echo __('Real time'); ?></span>
-                                    <h5><?php echo __('Article count'); ?></h5>
-                                </div>
-                                <div class="ibox-content">
 
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <h1 class="no-margins">1234</h1>
-                                            <div class="font-bold"><i class="fa fa-commenting"></i>
-                                                <small><?php echo __('Comment count'); ?></small>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <h1 class="no-margins">6754</h1>
-                                            <div class="font-bold"><i class="fa fa-heart"></i>
-                                                <small><?php echo __('Like count'); ?></small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-md-3">
-                        <div class="panel bg-green-gradient">
-                            <div class="panel-body">
-                                <div class="ibox-title">
-                                    <span class="label label-primary pull-right"><?php echo __('Real time'); ?></span>
-                                    <h5><?php echo __('News count'); ?></h5>
-                                </div>
-                                <div class="ibox-content">
-
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <h1 class="no-margins">5302</h1>
-                                            <div class="font-bold"><i class="fa fa-commenting"></i>
-                                                <small><?php echo __('Comment count'); ?></small>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <h1 class="no-margins">8205</h1>
-                                            <div class="font-bold"><i class="fa fa-user"></i>
-                                                <small><?php echo __('Like count'); ?></small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-4">
-                        <div class="box box-danger">
-                            <div class="box-header with-border">
-                                <h3 class="box-title"><?php echo __('Recent news'); ?></h3>
-
-                                <div class="box-tools pull-right">
-                                </div>
-                            </div>
-                            <div class="box-body">
-                                <ul class="products-list product-list-in-box">
-                                    <?php $__FOR_START_30029__=1;$__FOR_END_30029__=8;for($i=$__FOR_START_30029__;$i < $__FOR_END_30029__;$i+=1){ ?>
-                                    <li class="item">
-                                        <div class="product-img">
-                                            <img src="/assets/img/avatar.png" style="height:40px;width:40px;">
-                                        </div>
-                                        <div class="product-info">
-                                            <a href="https://www.fastadmin.net" target="_blank" class="product-title">
-                                                FastAdmin
-                                                <span class="label label-<?php echo $i%3===0?'warning':($i%2===0?'success':'info'); ?> pull-right">开源免费</span>
-                                            </a>
-                                            <span class="product-description">
-                                              一款基于ThinkPHP5+Bootstrap的极速后台开发框架
-                                            </span>
-                                        </div>
-                                    </li>
-                                    <?php } ?>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="box box-success">
-                            <div class="box-header with-border">
-                                <h3 class="box-title"><?php echo __('Recent discussion'); ?></h3>
-
-                                <div class="box-tools pull-right">
-                                </div>
-                            </div>
-                            <div class="box-body">
-                                <ul class="nav nav-pills nav-stacked">
-                                    <li><a href="https://www.fastadmin.net" target="_blank">一款基于ThinkPHP5+Bootstrap的极速后台开发框架<span class="pull-right text-red"><i class="fa fa-angle-down"></i> 12%</span></a></li>
-                                    <li><a href="https://www.fastadmin.net" target="_blank">一键生成CRUD控制器模型和视图 <span class="pull-right text-green"><i class="fa fa-angle-up"></i> 4%</span></a></li>
-                                    <li><a href="https://www.fastadmin.net" target="_blank">一键压缩打包JS和CSS文件 <span class="pull-right text-red"><i class="fa fa-angle-down"></i> 3%</span></a></li>
-                                    <li><a href="https://www.fastadmin.net" target="_blank">一键生成控制器菜单和规则 <span class="pull-right text-green"><i class="fa fa-angle-up"></i> 8%</span></a></li>
-                                    <li><a href="https://www.fastadmin.net" target="_blank">一键生成API接口文档 <span class="pull-right text-yellow"><i class="fa fa-angle-left"></i> 0%</span></a></li>
-                                    <li><a href="https://www.fastadmin.net" target="_blank">强大的插件扩展功能，在线安装卸载升级插件 <span class="pull-right text-red"><i class="fa fa-angle-down"></i> 10%</span></a></li>
-                                    <li><a href="https://www.fastadmin.net" target="_blank">通用的会员模块和API模块 <span class="pull-right text-green"><i class="fa fa-angle-up"></i> 2%</span></a></li>
-                                    <li><a href="https://www.fastadmin.net" target="_blank">共用同一账号体系的Web端会员中心权限验证和API接口会员权限验证 <span class="pull-right text-red"><i class="fa fa-angle-down"></i> 6%</span></a></li>
-                                    <li><a href="https://www.fastadmin.net" target="_blank">二级域名部署支持，同时域名支持绑定到插件 <span class="pull-right text-yellow"><i class="fa fa-angle-left"></i> 0%</span></a></li>
-                                    <li><a href="https://www.fastadmin.net" target="_blank">多语言支持，服务端及客户端支持 <span class="pull-right text-yellow"><i class="fa fa-angle-left"></i> 0%</span></a></li>
-                                    <li><a href="https://www.fastadmin.net" target="_blank">基于Bootstrap开发，自适应手机、平板、PC <span class="pull-right text-green"><i class="fa fa-angle-up"></i> 4%</span></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="box box-info">
-                            <div class="box-header"><h3 class="box-title"><?php echo __('Server info'); ?></h3></div>
-                            <div class="box-body" style="padding-top:0;">
-                                <table class="table table-striped">
-                                    <tbody>
-                                    <tr>
-                                        <td width="140"><?php echo __('FastAdmin version'); ?></td>
-                                        <td><?php echo \think\Config::get('fastadmin.version'); ?> <a href="javascript:;" class="btn btn-xs btn-checkversion">检查最新版</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td><?php echo __('FastAdmin addon version'); ?></td>
-                                        <td><?php echo $addonversion; ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td><?php echo __('Thinkphp version'); ?></td>
-                                        <td><?php echo THINK_VERSION; ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td><?php echo __('Sapi name'); ?></td>
-                                        <td><?php echo php_sapi_name(); ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td><?php echo __('Debug mode'); ?></td>
-                                        <td><?php echo \think\Config::get('app_debug')?__('Yes'):__('No'); ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td><?php echo __('Software'); ?></td>
-                                        <td><?php echo \think\Request::instance()->server('SERVER_SOFTWARE'); ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td><?php echo __('Upload mode'); ?></td>
-                                        <td><?php echo $uploadmode; ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td><?php echo __('Upload url'); ?></td>
-                                        <td><?php echo $config['upload']['uploadurl']; ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td><?php echo __('Upload Cdn url'); ?></td>
-                                        <td><?php echo $config['upload']['cdnurl']; ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td><?php echo __('Timezone'); ?></td>
-                                        <td><?php echo date_default_timezone_get(); ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td><?php echo __('Cdn url'); ?></td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td><?php echo __('Language'); ?></td>
-                                        <td><?php echo $config['language']; ?></td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
-            <div class="tab-pane fade" id="two">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <?php echo __('Custom zone'); ?>
-                    </div>
-                </div>
-            </div>
+            <!--<div class="tab-pane fade" id="two">-->
+                <!--<div class="row">-->
+                    <!--<div class="col-xs-12">-->
+                        <!--<?php echo __('Custom zone'); ?>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
         </div>
     </div>
 </div>

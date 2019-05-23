@@ -73,8 +73,9 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                                     url: 'pay/order/refund',
                                     hidden:function(row){
                                         // Layer.alert("接收到回传数据：" + JSON.stringify(row), {title: "回传数据"});
-                                        // Layer.alert("接收到回传数据：" +  parseInt(Date.parse(new Date())/1000+7200), {title: "回传数据"});
-                                        if(row.order_status == 1 || row.order_status == 3 || row.update_time < parseInt(Date.parse(new Date())/1000-7200)){
+                                        // Layer.alert("接收到回传数据：" +  JSON.stringify(111), {title: "回传数据"});
+                                        if(row.order_status == 1 || row.order_status == 3 || row.update_time < parseInt(Date.parse(new Date())/1000-7200) || row.group_id == 1){
+
                                             return true;
                                         }
                                     },

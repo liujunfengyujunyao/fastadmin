@@ -4,6 +4,7 @@ namespace app\admin\controller\pay;
 
 use app\common\controller\Backend;
 use think\Db;
+use think\Session;
 /**
  * 
  *
@@ -38,6 +39,8 @@ class Order extends Backend
     public function index()
     {
         $user_id = $_SESSION['think']['admin']['id'];
+        $s = Session::get('admin.id');
+
         $group_id = DB::name('auth_group_access')->where(['uid'=>$user_id])->value('group_id');
         $rule=$group_id==1?"1=1":['user_id'=>$user_id];
 
@@ -68,7 +71,10 @@ class Order extends Backend
                     ->order($sort, $order)
                     ->limit($offset, $limit)
                     ->select();
-
+            $group_id = DB::name('auth_group_access')->where(['uid'=>$user_id])->value('group_id');
+            foreach($list as $key => &$value){
+                $value['group_id'] = $group_id;
+            }
             foreach ($list as $row) {
 
                 $row->getRelation('wkuser')->visible(['id','type','user_name']);
@@ -77,6 +83,9 @@ class Order extends Backend
 //            foreach($list as $key => &$value){
 //                $value['last_time'] = $value['update_time']+7200;
 //            }
+
+
+//            halt($list);
             $result = array("total" => $total, "rows" => $list);
 
             return json($result);
@@ -165,11 +174,9 @@ class Order extends Backend
         return $this->view->fetch();
     }
 
-   /*
-    拉起支付二维码
-    创建订单*/
     public function av()
     {
+        //构造函数会报错
         $data = $this->model->pay(1,0.01,2,'',1);
         halt($data);
 
