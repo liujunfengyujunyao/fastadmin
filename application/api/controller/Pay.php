@@ -11,10 +11,13 @@ use EasyWeChat\QRCode\QRCode;
 use think\Db;
 use think\Controller;
 use app\common\controller\Backend;
-
+header('Access-Control-Allow-Headers: Content-Type,Content-Length,Accept-Encoding,X-Requested-with, Origin, Authorization,access-control-request-headers'); // 设置允许自定义请求头的字段
+//header("Access-Control-Max-Age", "1800");
+header("Content-Type: text/html;charset=utf-8");
+header('Access-Control-Allow-Methods:POST,GET,OPTIONS,DELETE'); // 允许请求的类型
+header('Access-Control-Allow-Credentials: true'); // 设置是否允许发送 cookies
+//header('Access-Control-Allow-Origin:http://bs.goldenbrother.cn');
 header('Access-Control-Allow-Origin:*');
-header('Access-Control-Allow-Headers: Content-Type,Content-Length,Accept-Encoding,X-Requested-with, Origin');
-
 class Pay extends Backend{
 
 
@@ -37,6 +40,26 @@ class Pay extends Backend{
         echo 222;
 
     }
+    public function test2()
+    {
+//        $url = "http://192.168.1.133/yeepay/api/pay";
+        $url = "http://192.168.1.144:1161/api/pay/pay";
+        $data = [
+            'type' => 1,
+//                'amount' => $check['order_amount'],
+            'amount' => 0.01,
+            'goods_name' => "广告",
+            'notify' => "http://liujunfeng.imwork.net/ad/client/notify"
+//                'notify' =>"http://47429ceb.ngrok.io/ad/client/notify"
+        ];
+//            halt($data);
+        $result = json_curl($url, $data);
+        halt($result);
+        $arr = json_decode($result, true);
+        $url = $arr['url'];
+        return $this->qrcode($url);
+        halt($arr);
+    }
 
     //申请支付链接
     public function pay(){
@@ -47,7 +70,7 @@ class Pay extends Backend{
         $goods_name = input('post.goods_name')?:'goods';
         $payType = array('1'=>'ALIPAY','2'=>'WECHAT');
         $sn = input('post.sn');//设备sn
-
+halt($sn);
         $request = new \YopRequest("OPR:".$this->parentMerchantNo, $this->private_key, "https://open.yeepay.com/yop-center",$this->yop_public_key);
 
         if($user_id == 1){$user_id = 2;}
@@ -91,9 +114,8 @@ class Pay extends Backend{
         $request->addParam("payType", $payType[$type]);
         $request->addParam("userIp", $_SERVER['REMOTE_ADDR']);
         $request->addParam("extParamMap", '{"reportFee":"XIANXIA"}');
-dump(1);
+
         $response = \YopClient3::post("/rest/v1.0/nccashierapi/api/orderpay", $request);
-        halt(2);
 
         $result = (array)$response->result;
         if($result['code'] == 'CAS00000'){

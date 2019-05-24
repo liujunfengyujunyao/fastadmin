@@ -1,0 +1,155 @@
+[ 2019-05-24T14:09:16+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000500s ]
+[ info ] [ LOG ] INIT File
+[ 2019-05-24T14:09:16+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-05-24T14:09:16+08:00 ][ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.003501s ]
+[ 2019-05-24T14:09:16+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004501s ]
+[ 2019-05-24T14:09:16+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-05-24T14:09:38+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+[ 2019-05-24T14:09:38+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-05-24T14:09:38+08:00 ][ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.003000s ]
+[ 2019-05-24T14:09:38+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004000s ]
+[ 2019-05-24T14:09:38+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-05-24T14:39:03+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000501s ]
+[ info ] [ LOG ] INIT File
+[ 2019-05-24T14:39:03+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-05-24T14:39:03+08:00 ][ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.003501s ]
+[ 2019-05-24T14:39:03+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004501s ]
+[ 2019-05-24T14:39:03+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-05-24T14:39:03+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.034505s ] mysql:host=pipiyaode.mysql.rds.aliyuncs.com;dbname=fa;charset=utf8
+[ 2019-05-24T14:39:03+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'wk_order' [ RunTime:0.039005s ]
+[ 2019-05-24T14:39:03+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_wk_order' [ RunTime:0.054007s ]
+[ 2019-05-24T14:41:28+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+[ 2019-05-24T14:41:28+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-05-24T14:41:28+08:00 ][ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.003501s ]
+[ 2019-05-24T14:41:28+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004501s ]
+[ 2019-05-24T14:41:28+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-05-24T14:41:28+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.041005s ] mysql:host=pipiyaode.mysql.rds.aliyuncs.com;dbname=fa;charset=utf8
+[ 2019-05-24T14:41:28+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'wk_order' [ RunTime:0.019003s ]
+[ 2019-05-24T14:41:28+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_wk_order' [ RunTime:0.020002s ]
+[ 2019-05-24T14:41:28+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'fa' AND table_name = 'fa_wk_order' ORDER BY ORDINAL_POSITION [ RunTime:0.024003s ]
+[ 2019-05-24T14:42:25+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+[ 2019-05-24T14:42:25+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-05-24T14:42:25+08:00 ][ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.007501s ]
+[ 2019-05-24T14:42:25+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.010002s ]
+[ 2019-05-24T14:42:25+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-05-24T14:42:36+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+[ 2019-05-24T14:42:36+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-05-24T14:42:36+08:00 ][ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.008001s ]
+[ 2019-05-24T14:42:36+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.010501s ]
+[ 2019-05-24T14:42:36+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-05-24T15:05:41+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+[ 2019-05-24T15:05:41+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-05-24T15:05:41+08:00 ][ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.003000s ]
+[ 2019-05-24T15:05:41+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004000s ]
+[ 2019-05-24T15:06:16+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+[ 2019-05-24T15:06:16+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-05-24T15:06:16+08:00 ][ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.006001s ]
+[ 2019-05-24T15:06:16+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.007001s ]
+[ 2019-05-24T15:06:16+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-05-24T15:06:16+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.034005s ] mysql:host=pipiyaode.mysql.rds.aliyuncs.com;dbname=fa;charset=utf8
+[ 2019-05-24T15:06:16+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'wk_order' [ RunTime:0.013501s ]
+[ 2019-05-24T15:06:16+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_wk_order' [ RunTime:0.012501s ]
+[ 2019-05-24T15:08:29+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+[ 2019-05-24T15:08:29+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-05-24T15:08:29+08:00 ][ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.003500s ]
+[ 2019-05-24T15:08:29+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004500s ]
+[ 2019-05-24T15:08:29+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-05-24T15:08:29+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.022003s ] mysql:host=pipiyaode.mysql.rds.aliyuncs.com;dbname=fa;charset=utf8
+[ 2019-05-24T15:08:29+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'wk_order' [ RunTime:0.013501s ]
+[ 2019-05-24T15:08:29+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_wk_order' [ RunTime:0.018003s ]
+[ 2019-05-24T15:08:29+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'fa' AND table_name = 'fa_wk_order' ORDER BY ORDINAL_POSITION [ RunTime:0.021503s ]
+[ 2019-05-24T15:09:28+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+[ 2019-05-24T15:09:28+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-05-24T15:09:28+08:00 ][ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.003500s ]
+[ 2019-05-24T15:09:28+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004000s ]
+[ 2019-05-24T15:09:28+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-05-24T15:10:33+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+[ 2019-05-24T15:10:33+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-05-24T15:10:33+08:00 ][ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.003501s ]
+[ 2019-05-24T15:10:33+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004001s ]
+[ 2019-05-24T15:10:33+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-05-24T15:11:48+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+[ 2019-05-24T15:11:48+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-05-24T15:11:48+08:00 ][ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.005500s ]
+[ 2019-05-24T15:11:48+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.006501s ]
+[ 2019-05-24T15:11:48+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-05-24T15:11:59+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+[ 2019-05-24T15:11:59+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-05-24T15:11:59+08:00 ][ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.005501s ]
+[ 2019-05-24T15:11:59+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.006501s ]
+[ 2019-05-24T15:11:59+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-05-24T15:11:59+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.035504s ] mysql:host=pipiyaode.mysql.rds.aliyuncs.com;dbname=fa;charset=utf8
+[ 2019-05-24T15:11:59+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'wk_order' [ RunTime:0.019502s ]
+[ 2019-05-24T15:11:59+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_wk_order' [ RunTime:0.025503s ]
+[ 2019-05-24T15:12:59+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000500s ]
+[ info ] [ LOG ] INIT File
+[ 2019-05-24T15:12:59+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-05-24T15:12:59+08:00 ][ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.008001s ]
+[ 2019-05-24T15:12:59+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.009001s ]
+[ 2019-05-24T15:13:00+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-05-24T15:13:00+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.046506s ] mysql:host=pipiyaode.mysql.rds.aliyuncs.com;dbname=fa;charset=utf8
+[ 2019-05-24T15:13:00+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'wk_order' [ RunTime:0.016502s ]
+[ 2019-05-24T15:13:00+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_wk_order' [ RunTime:0.023003s ]
+[ 2019-05-24T15:13:00+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'fa' AND table_name = 'fa_wk_order' ORDER BY ORDINAL_POSITION [ RunTime:0.025503s ]
+[ 2019-05-24T15:17:20+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+[ 2019-05-24T15:17:20+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-05-24T15:17:20+08:00 ][ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.003500s ]
+[ 2019-05-24T15:17:20+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.005000s ]
+[ 2019-05-24T15:17:20+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-05-24T15:17:20+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.028004s ] mysql:host=pipiyaode.mysql.rds.aliyuncs.com;dbname=fa;charset=utf8
+[ 2019-05-24T15:17:20+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'wk_order' [ RunTime:0.022003s ]
+[ 2019-05-24T15:17:20+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_wk_order' [ RunTime:0.029004s ]
+[ 2019-05-24T15:18:33+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+[ 2019-05-24T15:18:33+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-05-24T15:18:33+08:00 ][ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.006001s ]
+[ 2019-05-24T15:18:33+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.008001s ]
+[ 2019-05-24T15:18:33+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-05-24T15:18:33+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.064008s ] mysql:host=pipiyaode.mysql.rds.aliyuncs.com;dbname=fa;charset=utf8
+[ 2019-05-24T15:18:33+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'wk_order' [ RunTime:0.016502s ]
+[ 2019-05-24T15:18:33+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_wk_order' [ RunTime:0.022503s ]
+[ 2019-05-24T15:18:33+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'fa' AND table_name = 'fa_wk_order' ORDER BY ORDINAL_POSITION [ RunTime:0.014501s ]
+[ 2019-05-24T15:19:03+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+[ 2019-05-24T15:19:03+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-05-24T15:19:03+08:00 ][ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.004000s ]
+[ 2019-05-24T15:19:03+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.005000s ]
+[ 2019-05-24T15:19:03+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-05-24T15:19:03+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-05-24T15:19:03+08:00 ][ info ] [ LANG ] D:\WWW\fastadmin\application\admin\lang/zh-cn.php
+[ 2019-05-24T15:19:03+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.024503s ] mysql:host=pipiyaode.mysql.rds.aliyuncs.com;dbname=fa;charset=utf8
+[ 2019-05-24T15:19:03+08:00 ][ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.015502s ]
+[ 2019-05-24T15:19:04+08:00 ][ sql ] [ SQL ] SELECT * FROM `fa_auth_rule` WHERE  `name` = 'pay' LIMIT 1 [ RunTime:0.013002s ]
+[ 2019-05-24T15:19:04+08:00 ][ sql ] [ SQL ] SELECT * FROM `fa_auth_rule` WHERE  `name` = 'pay/account' LIMIT 1 [ RunTime:0.014001s ]
+[ 2019-05-24T15:19:04+08:00 ][ sql ] [ SQL ] INSERT INTO `fa_auth_rule` (`pid` , `name` , `title` , `icon` , `remark` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (431 , 'pay/account' , 'Account' , 'fa fa-circle-o' , '' , 1 , 'normal' , 1558682344 , 1558682344) [ RunTime:0.025503s ]
+[ 2019-05-24T15:19:04+08:00 ][ sql ] [ SQL ] SELECT `id` FROM `fa_auth_rule` WHERE  `name` = 'pay/account/index' LIMIT 1 [ RunTime:0.012002s ]
+[ 2019-05-24T15:19:04+08:00 ][ sql ] [ SQL ] SELECT `id` FROM `fa_auth_rule` WHERE  `name` = 'pay/account/add' LIMIT 1 [ RunTime:0.013502s ]
+[ 2019-05-24T15:19:04+08:00 ][ sql ] [ SQL ] SELECT `id` FROM `fa_auth_rule` WHERE  `name` = 'pay/account/edit' LIMIT 1 [ RunTime:0.012001s ]
+[ 2019-05-24T15:19:04+08:00 ][ sql ] [ SQL ] SELECT `id` FROM `fa_auth_rule` WHERE  `name` = 'pay/account/del' LIMIT 1 [ RunTime:0.012502s ]
+[ 2019-05-24T15:19:04+08:00 ][ sql ] [ SQL ] SELECT `id` FROM `fa_auth_rule` WHERE  `name` = 'pay/account/multi' LIMIT 1 [ RunTime:0.013002s ]
+[ 2019-05-24T15:19:04+08:00 ][ sql ] [ SQL ] INSERT INTO `fa_auth_rule` (`id` , `pid` , `name` , `icon` , `title` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (NULL , 447 , 'pay/account/index' , 'fa fa-circle-o' , '查看' , 0 , 'normal' , 1558682344 , 1558682344) [ RunTime:0.014502s ]
+[ 2019-05-24T15:19:04+08:00 ][ sql ] [ SQL ] INSERT INTO `fa_auth_rule` (`id` , `pid` , `name` , `icon` , `title` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (NULL , 447 , 'pay/account/add' , 'fa fa-circle-o' , '添加' , 0 , 'normal' , 1558682344 , 1558682344) [ RunTime:0.015502s ]
+[ 2019-05-24T15:19:04+08:00 ][ sql ] [ SQL ] INSERT INTO `fa_auth_rule` (`id` , `pid` , `name` , `icon` , `title` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (NULL , 447 , 'pay/account/edit' , 'fa fa-circle-o' , '编辑' , 0 , 'normal' , 1558682344 , 1558682344) [ RunTime:0.014502s ]
+[ 2019-05-24T15:19:04+08:00 ][ sql ] [ SQL ] INSERT INTO `fa_auth_rule` (`id` , `pid` , `name` , `icon` , `title` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (NULL , 447 , 'pay/account/del' , 'fa fa-circle-o' , '删除' , 0 , 'normal' , 1558682344 , 1558682344) [ RunTime:0.014502s ]
+[ 2019-05-24T15:19:04+08:00 ][ sql ] [ SQL ] INSERT INTO `fa_auth_rule` (`id` , `pid` , `name` , `icon` , `title` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (NULL , 447 , 'pay/account/multi' , 'fa fa-circle-o' , '批量更新' , 0 , 'normal' , 1558682344 , 1558682344) [ RunTime:0.025003s ]
+[ 2019-05-24T15:20:41+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+[ 2019-05-24T15:20:41+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-05-24T15:20:41+08:00 ][ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.003501s ]
+[ 2019-05-24T15:20:41+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004001s ]
+[ 2019-05-24T15:20:41+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-05-24T15:20:41+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.026004s ] mysql:host=pipiyaode.mysql.rds.aliyuncs.com;dbname=fa;charset=utf8
+[ 2019-05-24T15:20:41+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'wk_order' [ RunTime:0.015002s ]
+[ 2019-05-24T15:20:41+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_wk_order' [ RunTime:0.014502s ]
