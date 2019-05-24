@@ -7,6 +7,7 @@
  */
 
 namespace app\api\controller;
+use EasyWeChat\QRCode\QRCode;
 use think\Db;
 use think\Controller;
 use app\common\controller\Backend;
@@ -90,8 +91,10 @@ class Pay extends Backend{
         $request->addParam("payType", $payType[$type]);
         $request->addParam("userIp", $_SERVER['REMOTE_ADDR']);
         $request->addParam("extParamMap", '{"reportFee":"XIANXIA"}');
-
+dump(1);
         $response = \YopClient3::post("/rest/v1.0/nccashierapi/api/orderpay", $request);
+        halt(2);
+
         $result = (array)$response->result;
         if($result['code'] == 'CAS00000'){
             $info = array(
@@ -111,7 +114,7 @@ class Pay extends Backend{
                 'update_time'=>time(),
                 'sn'=>$sn
             );
-            $res = Db::name('wk_order')->add($info);
+            $res = Db::name('wk_order')->insert($info);
             if($res != false){
                 return $result['resultData'];
             }
@@ -195,10 +198,14 @@ class Pay extends Backend{
         $request->addParam("payType", $payType[$type]);
         $request->addParam("userIp", $_SERVER['REMOTE_ADDR']);
         $request->addParam("extParamMap", '{"reportFee":"XIANXIA"}');
-//return $request;
+//dump(2);
         $response = \YopClient3::post("/rest/v1.0/nccashierapi/api/orderpay", $request);
-//    return 2;
-        $result = (array)$response->result;
+//halt($response);
+        $response = json_decode($response,true);
+//        halt($response);
+        $result = $response['result'];
+//halt([$response,$request]);
+//        halt($data);
         if($result['code'] == 'CAS00000'){
             $info = array(
                 'user_id'=>$user_id,
@@ -207,7 +214,7 @@ class Pay extends Backend{
                 'type'=>$type,
                 'order_amount'=>$data['orderAmount'],
                 'goods_title'=>$goods['goodsName'],
-                'goods_detail'=>$goods['goodsDesc']?:'',
+//                'goods_detail'=>$goods['goodsDesc']?:'',
                 'residual_amount'=>$data['orderAmount'],
                 'user_in'=>$user_in,
                 'platform_in'=>$platform_in,
@@ -217,15 +224,30 @@ class Pay extends Backend{
                 'update_time'=>time(),
                 'sn'=>$sn
             );
-            $res = Db::name('wk_order')->add($info);
+//            halt($info);
+            $res = Db::name('wk_order')->insert($info);
             if($res != false){
-                return $result['resultData'];
+                $return =  ['url' => $result['resultData'],'uniqueOrderNo' => $result['uniqueOrderNo']];
+//                return $return;
+                $url = urldecode($return['url']);
+//                return $url;
+//              return $this->makeQrcodeImg($url);
+              return $this->qrcode($url);
             }
         }else{
             //var_dump($response);
             return json(['status'=>0,'msg'=>'下单失败']);
         }
     }
+    public function qrcode($url)
+    {
+        vendor('phpqrcode.phpqrcode');
+        $object=new \QRcode();
+        ob_end_clean();
+        $object->png($url,false,3,10,2);
+        exit();
+    }
+
 //    //回调
 //    public function callback(){
 //        import('yeepay.Util.YopSignUtils', EXTEND_PATH, '.php');
@@ -280,6 +302,27 @@ class Pay extends Backend{
             $Str.=$k."=".$v;
         }
         return $Str;
+    }
+    //接收支付回调信息
+    public function notify()
+    {   //私钥
+        $private_Key = "MIIEugIBADANBgkqhkiG9w0BAQEFAASCBKQwggSgAgEAAoIBAQDAVCOCDnslcJceuxavrLswc9WPU9b7yBTVadL8dPVD+Qqpd1xcFQm1FyxIZRbgEAV4MT8oSdhMYqV7bKSyt5PrT9oU5bzJytdJQwxe3eX7WYMldHNv9EHr1uJAQhgWPwqRndRoKHiCxcgy6ps10HGE8Qj0IsAyTL/Og6idcYekVlbVj9w0kotq0kPmRkda0wS8lYD6mH6qq9C36FnEWV3qVKdcO/hJ2AG9e5m75HuAU99BbfwYr0uStZcimpYLtOj0/Cn4v5B//Gthc/Cgf3LJ5FuiKmPKoxfnNoB4TB5ALRcDaovacT7SsMhXFwbfRkt2OfZVYqFtiiuyzUYefU+ZAgMBAAECgf90cn0NQbdN892Lvbr+opazv26OWTTRPVNf47LbJ/VYMnFCKgLBvfsiqeUl8A7pmsm0/BxBSHStywxmrmEJ1By7XJ2uCWtEwouW0AGtbqzQgmHlS5yZLEq9gF18iogK8CB2ChmQ9vAAPb/5FBLlgk85Lrc9Gc1EpzN61jxBF3wJAy/2AL0Q+NYpq6TOWXWoEYFnjQtStq7AaJOh4/K0RhmFvVapyXL4i7fWddWW2jZ//AzIOe5ok5VD7YdxPKXRSxCjlS5JTDVDAZ3KY72i4+oVpeqffF5XR3MdAai+66wHI3eH0QKf6Qz56wyH9yFwSzBEValeWV29SP+MOhjcqI0CgYEA8NxL2kzVh8Kdygkm9pJB3Gxd9ZUPw9oKEdWusZSKLvIs36KPY6qYB5xsF03lmZoe0HvtBLUL03J/D2BVDChHbv2pT5wxKkHU0vkw5ojRiEnMpWbvE6skndeZEA1DD6E4+RSL10siAjXoSKifHzaEu7s1Km30hWqsRBdzXir3gNMCgYEAzGrpqkFnSnQq4sepnL9v247ikjYJi80tly1tjMdkJww9exX1EOSgSMXtXgMof99GUTipFBHe8PRtX4I+yI9K/I4zxRtaYgP+gZ7BVgYe98E6ZNrGD/8LNbJfDbsBwrtYDE/Y23hRbLJOPN/+PocF5LA+uJMuIni1DDfh7MJgymMCgYB+cskHtCqt+UgpVyCzdhlJhULWuQjrwz5iGpJ5/AeHmfBg/9DTfC4QYNiGa4jMWRMwVL8cJ4gr3AJEqkg797F43YbTmqZdDu6SS+yWOuH18PiVJTMCWmkAzL04ph28yOFGMrkvr+wMyQxHiO7wzghlHmVM/yjOGjCSFtWkbF4/rQKBgDI+8VKdIvOFHGmD5GgYEjmopH6F89C+TT+EthHNjQugEZiorAVL/S4GILNkGVddHV6ni7/YKLGXky7Px/jqZ+cuWQFRGOVQ0AUybZlkhcYmY+EYeWjDKxE21/B7EBK6lAjqs4Y2y+To6xxBfrAF5mfw/mnGG6fzfaUUM19L5Bi7AoGAVI8iQ5NP0iZtCdSnQPkjKZMDifwVLwdfcaEjRYop7cfe9IYak+QPC/LQGkjKH5G8t2OAsbC9wExwM3Lhd9DKRBDlqcCPxaTD5Wxq1UDXDcARWarWOpDF7l3Gt7StAsGo9QRb8d0w9CRFLCDzxj1CKGwVz12XfrpL/OdVqtHe/EI=";
+        //公钥
+        $public_Key = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA6p0XWjscY+gsyqKRhw9MeLsEmhFdBRhT2emOck/F1Omw38ZWhJxh9kDfs5HzFJMrVozgU+SJFDONxs8UB0wMILKRmqfLcfClG9MyCNuJkkfm0HFQv1hRGdOvZPXj3Bckuwa7FrEXBRYUhK7vJ40afumspthmse6bs6mZxNn/mALZ2X07uznOrrc2rk41Y2HftduxZw6T4EmtWuN2x4CZ8gwSyPAW5ZzZJLQ6tZDojBK4GZTAGhnn3bg5bBsBlw2+FLkCQBuDsJVsFPiGh/b6K/+zGTvWyUcu+LUj2MejYQELDO3i2vQXVDk7lVi2/TcUYefvIcssnzsfCfjaorxsuwIDAQAB";
+        $source = $_REQUEST["response"];
+        $json = decrypt($source, $private_Key, $public_Key);
+        $data = json_decode($json, true);
+
+        Db::name('wk_order')->where(['unique_order_id' => $data['uniqueOrderNo'], 'order_status' => 1])->update('order_status', 2);
+//        Db::name('ad_order')->where(['unique_order_id' => $data['uniqueOrderNo']])->save(['status' => 1]);
+        $check_id = DB::name('ad_order')->where(['unique_order_id' => $data['uniqueOrderNo']])->getField('check_id');
+        DB::name('ad_check')->where(['id' => $check_id])->save(['is_pay' => 1]);
+        $this->check_time($check_id);//扣除时间
+        $this->send_msg($check_id);//发送协议
+        $log = 'time:' . date('Y-m-d H:i:s', time()) . PHP_EOL . 'data:' . $json . PHP_EOL . PHP_EOL;
+        file_put_contents('./callback.log', $log, FILE_APPEND);
+        echo "SUCCESS";
+
     }
 
 }

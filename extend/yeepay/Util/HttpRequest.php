@@ -17,7 +17,6 @@ abstract class HTTPRequest{
      * @return type
      */
     static public function curl_request($url, $request){
-
         $curl = curl_init();
         curl_setopt($curl, CURLOPT_USERAGENT, USERAGENT);
         curl_setopt($curl, CURLOPT_FOLLOWLOCATION, 1);
@@ -47,7 +46,7 @@ abstract class HTTPRequest{
 
         if($request->jsonParam!=null) {
             array_push($headerArray,'Content-Type: application/json; charset=utf-8',
-                                    'Content-Length: ' . strlen());
+                                    'Content-Length: ' . strlen($request->jsonParam));
         }
         curl_setopt($curl, CURLOPT_HTTPHEADER,  $headerArray);
 

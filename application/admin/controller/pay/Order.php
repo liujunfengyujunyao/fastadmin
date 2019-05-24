@@ -195,6 +195,7 @@ class Order extends Backend
     public function test()
     {
         $url = "http://192.168.1.133/yeepay/api/pay";
+//        $url = "http://192.168.1.144:1161/api/pay/pay";
         $data = [
             'type' => 1,
 //                'amount' => $check['order_amount'],
@@ -205,9 +206,31 @@ class Order extends Backend
         ];
 //            halt($data);
         $result = json_curl($url, $data);
-            halt($result);
+//            halt($result);
         $arr = json_decode($result, true);
-
+        $url = $arr['url'];
+        return $this->qrcode($url);
         halt($arr);
     }
+    public function makeQrcodeImg ($value) {
+        vendor('phpqrcode.phpqrcode');
+        $errorCorrectionLevel = "Q"; // 纠错级别：L、M、Q、H
+        $matrixPointSize = "8"; // 点的大小：1到10
+        $qr = new \QRcode();
+        ob_end_clean();//关键
+        $code = urlencode($value . '×tamp = ' . time());
+        $qr::png($code, false, $errorCorrectionLevel, $matrixPointSize);
+    }
+    public function qrcode($url)
+    {
+        vendor('phpqrcode.phpqrcode');
+        $object=new \QRcode();
+        ob_end_clean();
+        $object->png($url,false,3,10,2);
+        exit();
+    }
+
+
+
+
 }

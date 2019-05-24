@@ -145,10 +145,11 @@ class YopRsaClient
 
     public static function post($methodOrUri, $YopRequest)
     {
-
+//        halt([$methodOrUri,$YopRequest]);
         $content = YopRsaClient::postString($methodOrUri, $YopRequest);
-        halt($content);
+//halt($content);
         $response = YopRsaClient::handleRsaResult($YopRequest, $content);
+//        halt($response);
         return $response;
     }
 
@@ -159,10 +160,10 @@ class YopRsaClient
      */
     public static function postString($methodOrUri, $YopRequest)
     {
-
         $YopRequest->httpMethod = "POST";
         $serverUrl = YopRsaClient::richRequest($methodOrUri, $YopRequest);
         self::SignRsaParameter($methodOrUri, $YopRequest);
+//        halt($YopRequest);
         $response = HttpRequest::curl_request("https://openapi.yeepay.com/yop-center".$methodOrUri, $YopRequest);
         return $response;
     }
@@ -316,7 +317,10 @@ class YopRsaClient
 
     public static function handleRsaResult($request, $content)
     {
-        if ($request->downRequest) {
+        $a = collection($request)->toArray();
+//        halt($a);
+//        if ($request->downRequest) {
+        if ($a['headers']['x-yop-request-id']) {
             return $content;
         }
 
@@ -327,7 +331,7 @@ class YopRsaClient
         $response->ts = $jsoncontent->ts;
         $response->sign = $jsoncontent->sign;
         $response->requestId = $request->requestId;
-
+halt(1);
         if(!empty($jsoncontent->error)){
             if(is_array($jsoncontent->error)){
                 foreach ($jsoncontent->error as $k => $v) {

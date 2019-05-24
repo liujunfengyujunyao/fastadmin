@@ -100,7 +100,7 @@ class YopRequest {
             $this->serverRoot = $serverRoot;
         }
         else{
-            $this->serverRoot = $this->config->serverRoot;
+            $this->serverRoot = $this->config->yosServerRoot;
         }
 //        if(!empty($serverRoot)){
 //             $this->serverRoot = $yosServerRoot;

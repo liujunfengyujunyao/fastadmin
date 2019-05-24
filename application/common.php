@@ -404,3 +404,94 @@ function json_curl($url, $para ){
     return $result;
     }
 }
+
+if (!function_exists('json_curl')) {
+    function decrypt($source, $private_Key, $public_Key)
+    {
+
+        $private_key = "-----BEGIN RSA PRIVATE KEY-----\n" .
+            wordwrap($private_Key, 64, "\n", true) .
+            "\n-----END RSA PRIVATE KEY-----";
+
+        extension_loaded('openssl') or die('php需要openssl扩展支持');
+
+
+        /* 提取私钥 */
+        $privateKey = openssl_get_privatekey($private_key);
+
+        ($privateKey) or die('密钥不可用');
+
+
+        //分解参数
+        $args = explode('$', $source);
+
+
+        if (count($args) != 4) {
+            return 'source invalid : ';
+        }
+
+        $encryptedRandomKeyToBase64 = $args[0];
+        $encryptedDataToBase64 = $args[1];
+        $symmetricEncryptAlg = $args[2];
+        $digestAlg = $args[3];
+
+        //用私钥对随机密钥进行解密
+        openssl_private_decrypt(base64_decode(strtr($encryptedRandomKeyToBase64, '-_', '+/')), $randomKey, $privateKey);
+
+
+        openssl_free_key($privateKey);
+
+
+        $encryptedData = openssl_decrypt(base64_decode(strtr($encryptedDataToBase64, '-_', '+/')), "AES-128-ECB", $randomKey, OPENSSL_RAW_DATA);
+
+
+        //分解参数
+        $signToBase64 = substr(strrchr($encryptedData, '$'), 1);
+        $sourceData = substr($encryptedData, 0, strlen($encryptedData) - strlen($signToBase64) - 1);
+
+        $public_key = "-----BEGIN PUBLIC KEY-----\n" .
+            wordwrap($public_Key, 64, "\n", true) .
+            "\n-----END PUBLIC KEY-----";
+
+
+        $publicKey = openssl_pkey_get_public($public_key);
+
+        $res = openssl_verify($sourceData, base64_decode(strtr($signToBase64, '-_', '+/')), $publicKey, $digestAlg); //验证
+
+        openssl_free_key($publicKey);
+
+        //输出验证结果，1：验证成功，0：验证失败
+        if ($res == 1) {
+            return $sourceData;
+        } else {
+            return "verifySign fail!";
+        }
+    }
+}
+if (!function_exists('json_curl')) {
+    function QRcode($url)
+    {
+        vendor('phpqrcode.phpqrcode');
+        $object = new \QRcode();
+        ob_end_clean();
+        $object->png($url, false, 3, 10, 2);
+        exit();
+
+    }
+}
+
+if (!function_exists('json_curl')) {
+    function create_qrcode($url)
+    {
+        vendor("phpqrcode.phpqrcode");
+        $data = $url;
+        $outfile = ROOT_PATH . "public/qrcode/" . time() . '.jpg';
+        $level = 'L';
+        $size = 4;
+        $QRcode = new \QRcode();
+        ob_start();
+        $QRcode->png($data, $outfile, $level, $size, 2);
+        ob_end_clean();
+        return time();
+    }
+}
