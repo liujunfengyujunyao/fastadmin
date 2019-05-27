@@ -1,29 +1,27 @@
 <?php
 
-namespace app\admin\controller\pay;
+namespace app\admin\controller\check;
 
 use app\common\controller\Backend;
-use app\admin\model\Admin;
 use think\Db;
 /**
  * 
  *
  * @icon fa fa-circle-o
  */
-//用户端查账
-class Account extends Backend
+class Cost extends Backend
 {
     
     /**
-     * Account模型对象
-     * @var \app\admin\model\pay\Account
+     * Cost模型对象
+     * @var \app\admin\model\check\Cost
      */
     protected $model = null;
 
     public function _initialize()
     {
         parent::_initialize();
-        $this->model = new \app\admin\model\pay\Account;
+        $this->model = new \app\admin\model\check\Cost;
         $this->view->assign("typeList", $this->model->getTypeList());
     }
     
@@ -41,9 +39,7 @@ class Account extends Backend
     {
         //当前是否为关联查询
         $this->relationSearch = false;
-        $admin = Admin::get($this->auth->id);
-        $wk_id = $admin['wk_id'];
-        $rule['user_id'] = ['eq',$wk_id];
+        $status['status'] = ['eq',2];
         //设置过滤方法
         $this->request->filter(['strip_tags']);
         if ($this->request->isAjax())
@@ -55,20 +51,20 @@ class Account extends Backend
             }
             list($where, $sort, $order, $offset, $limit) = $this->buildparams();
             $total = $this->model
-                    ->where($rule)
+                    ->where($status)
                     ->where($where)
                     ->order($sort, $order)
                     ->count();
 
             $list = $this->model
-                    ->where($rule)
+//                    ->where($status)
                     ->where($where)
                     ->order($sort, $order)
                     ->limit($offset, $limit)
                     ->select();
 
             foreach ($list as $row) {
-                $row->visible(['id','order_id','order_status','unique_order_id','type','order_amount','update_time']);
+                $row->visible(['id','uid','name','mobile','email','update_time','type']);
                 
             }
             $list = collection($list)->toArray();
@@ -78,46 +74,16 @@ class Account extends Backend
         }
         return $this->view->fetch();
     }
-    //退款
-    public function refund()
+
+    public function detail()
     {
-        $order_id = request()->param('ids');
-        if ($this->request->isPost()) {
+        $check_id = request()->param('ids');//check_info的主键
+        $check_info = DB::name('check_info')->where(['id'=>$check_id])->value('info');
+        $type = DB::name('check_info')->where(['id'=>$check_id])->value('type');
+        $info = json_decode($check_info,true);
 
-            $params = request()->param();
-
-
-            if ($params) {
-
-                $params = $this->preExcludeFields($params);//过滤
-//                $result = false;
-                Db::startTrans();
-//                $api = ;//调用接口
-                $order = $this->model->where(['id'=>$params['ids']])->find();
-                if($order['order_amount']<$params['refund_amount'] || $order['order_status'] !== 2){
-                    $this->error("退款金额过大");
-                }
-                $result = $this->model->where(['id'=>$params['ids']])->update(['order_status'=>3,'update_time'=>time()]);
-                if ($result !== false) {
-                    $this->success('退款成功','admin/pay/account');
-                } else {
-                    $this->error(__('No rows were updated'));
-                }
-            }
-            $this->error(__('Parameter %s can not be empty', ''));
-        }
-        $this->view->assign('order_id',$order_id);
-        return $this->view->fetch();
-    }
-
-    //收款页面
-    public function paymethod()
-    {
-        if ($this->request->isAjax())
-        {
-
-        }
-
+        $this->view->assign('type',$type);
+        $this->view->assign('row',$info);
         return $this->view->fetch();
     }
 }

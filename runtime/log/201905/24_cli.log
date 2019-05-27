@@ -153,3 +153,86 @@
 [ 2019-05-24T15:20:41+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.026004s ] mysql:host=pipiyaode.mysql.rds.aliyuncs.com;dbname=fa;charset=utf8
 [ 2019-05-24T15:20:41+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'wk_order' [ RunTime:0.015002s ]
 [ 2019-05-24T15:20:41+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_wk_order' [ RunTime:0.014502s ]
+[ 2019-05-24T19:00:15+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+[ 2019-05-24T19:00:15+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-05-24T19:00:15+08:00 ][ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.003500s ]
+[ 2019-05-24T19:00:15+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004000s ]
+[ 2019-05-24T19:00:15+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-05-24T19:00:16+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.053507s ] mysql:host=pipiyaode.mysql.rds.aliyuncs.com;dbname=fa;charset=utf8
+[ 2019-05-24T19:00:16+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'check_info' [ RunTime:0.044506s ]
+[ 2019-05-24T19:00:16+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_check_info' [ RunTime:0.024503s ]
+[ 2019-05-24T19:00:16+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'fa' AND table_name = 'fa_check_info' ORDER BY ORDINAL_POSITION [ RunTime:0.070009s ]
+[ 2019-05-24T19:00:55+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+[ 2019-05-24T19:00:55+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-05-24T19:00:55+08:00 ][ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.003500s ]
+[ 2019-05-24T19:00:55+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004001s ]
+[ 2019-05-24T19:00:55+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-05-24T19:00:55+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-05-24T19:00:55+08:00 ][ info ] [ LANG ] D:\WWW\fastadmin\application\admin\lang/zh-cn.php
+[ 2019-05-24T19:00:55+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.072009s ] mysql:host=pipiyaode.mysql.rds.aliyuncs.com;dbname=fa;charset=utf8
+[ 2019-05-24T19:00:55+08:00 ][ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.050006s ]
+[ 2019-05-24T19:00:55+08:00 ][ sql ] [ SQL ] SELECT * FROM `fa_auth_rule` WHERE  `name` = 'check' LIMIT 1 [ RunTime:0.042006s ]
+[ 2019-05-24T19:00:55+08:00 ][ sql ] [ SQL ] INSERT INTO `fa_auth_rule` (`pid` , `name` , `title` , `icon` , `remark` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (0 , 'check' , 'Check' , 'fa fa-circle-o' , '' , 1 , 'normal' , 1558695655 , 1558695655) [ RunTime:0.035504s ]
+[ 2019-05-24T19:00:55+08:00 ][ sql ] [ SQL ] SELECT `id` FROM `fa_auth_rule` WHERE  `name` = 'check/index' LIMIT 1 [ RunTime:0.031504s ]
+[ 2019-05-24T19:00:55+08:00 ][ sql ] [ SQL ] SELECT `id` FROM `fa_auth_rule` WHERE  `name` = 'check/add' LIMIT 1 [ RunTime:0.035505s ]
+[ 2019-05-24T19:00:55+08:00 ][ sql ] [ SQL ] SELECT `id` FROM `fa_auth_rule` WHERE  `name` = 'check/edit' LIMIT 1 [ RunTime:0.040005s ]
+[ 2019-05-24T19:00:55+08:00 ][ sql ] [ SQL ] SELECT `id` FROM `fa_auth_rule` WHERE  `name` = 'check/del' LIMIT 1 [ RunTime:0.024003s ]
+[ 2019-05-24T19:00:55+08:00 ][ sql ] [ SQL ] SELECT `id` FROM `fa_auth_rule` WHERE  `name` = 'check/multi' LIMIT 1 [ RunTime:0.027003s ]
+[ 2019-05-24T19:00:55+08:00 ][ sql ] [ SQL ] INSERT INTO `fa_auth_rule` (`id` , `pid` , `name` , `icon` , `title` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (NULL , 454 , 'check/index' , 'fa fa-circle-o' , '查看' , 0 , 'normal' , 1558695655 , 1558695655) [ RunTime:0.034504s ]
+[ 2019-05-24T19:00:55+08:00 ][ sql ] [ SQL ] INSERT INTO `fa_auth_rule` (`id` , `pid` , `name` , `icon` , `title` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (NULL , 454 , 'check/add' , 'fa fa-circle-o' , '添加' , 0 , 'normal' , 1558695655 , 1558695655) [ RunTime:0.034004s ]
+[ 2019-05-24T19:00:55+08:00 ][ sql ] [ SQL ] INSERT INTO `fa_auth_rule` (`id` , `pid` , `name` , `icon` , `title` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (NULL , 454 , 'check/edit' , 'fa fa-circle-o' , '编辑' , 0 , 'normal' , 1558695655 , 1558695655) [ RunTime:0.043006s ]
+[ 2019-05-24T19:00:55+08:00 ][ sql ] [ SQL ] INSERT INTO `fa_auth_rule` (`id` , `pid` , `name` , `icon` , `title` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (NULL , 454 , 'check/del' , 'fa fa-circle-o' , '删除' , 0 , 'normal' , 1558695655 , 1558695655) [ RunTime:0.035504s ]
+[ 2019-05-24T19:00:55+08:00 ][ sql ] [ SQL ] INSERT INTO `fa_auth_rule` (`id` , `pid` , `name` , `icon` , `title` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (NULL , 454 , 'check/multi' , 'fa fa-circle-o' , '批量更新' , 0 , 'normal' , 1558695655 , 1558695655) [ RunTime:0.040005s ]
+[ 2019-05-24T19:08:14+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+[ 2019-05-24T19:08:14+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-05-24T19:08:14+08:00 ][ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.004001s ]
+[ 2019-05-24T19:08:14+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.005001s ]
+[ 2019-05-24T19:08:14+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-05-24T19:08:14+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.054007s ] mysql:host=pipiyaode.mysql.rds.aliyuncs.com;dbname=fa;charset=utf8
+[ 2019-05-24T19:08:14+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'check_info' [ RunTime:0.059507s ]
+[ 2019-05-24T19:08:14+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_check_info' [ RunTime:0.042506s ]
+[ 2019-05-24T19:09:12+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+[ 2019-05-24T19:09:12+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-05-24T19:09:12+08:00 ][ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.004001s ]
+[ 2019-05-24T19:09:12+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004501s ]
+[ 2019-05-24T19:09:12+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-05-24T19:09:12+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.055007s ] mysql:host=pipiyaode.mysql.rds.aliyuncs.com;dbname=fa;charset=utf8
+[ 2019-05-24T19:09:12+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'check_info' [ RunTime:0.033505s ]
+[ 2019-05-24T19:09:12+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_check_info' [ RunTime:0.052507s ]
+[ 2019-05-24T19:14:43+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+[ 2019-05-24T19:14:43+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-05-24T19:14:43+08:00 ][ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.004001s ]
+[ 2019-05-24T19:14:43+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004501s ]
+[ 2019-05-24T19:14:43+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-05-24T19:14:43+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.073509s ] mysql:host=pipiyaode.mysql.rds.aliyuncs.com;dbname=fa;charset=utf8
+[ 2019-05-24T19:14:43+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'check_info' [ RunTime:0.029003s ]
+[ 2019-05-24T19:14:43+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_check_info' [ RunTime:0.071009s ]
+[ 2019-05-24T19:14:43+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'fa' AND table_name = 'fa_check_info' ORDER BY ORDINAL_POSITION [ RunTime:0.042505s ]
+[ 2019-05-24T19:15:32+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+[ 2019-05-24T19:15:32+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-05-24T19:15:32+08:00 ][ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.006001s ]
+[ 2019-05-24T19:15:32+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.007001s ]
+[ 2019-05-24T19:15:32+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-05-24T19:15:32+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-05-24T19:15:32+08:00 ][ info ] [ LANG ] D:\WWW\fastadmin\application\admin\lang/zh-cn.php
+[ 2019-05-24T19:15:32+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.077010s ] mysql:host=pipiyaode.mysql.rds.aliyuncs.com;dbname=fa;charset=utf8
+[ 2019-05-24T19:15:32+08:00 ][ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.029004s ]
+[ 2019-05-24T19:15:32+08:00 ][ sql ] [ SQL ] SELECT * FROM `fa_auth_rule` WHERE  `name` = 'check' LIMIT 1 [ RunTime:0.027004s ]
+[ 2019-05-24T19:15:32+08:00 ][ sql ] [ SQL ] SELECT * FROM `fa_auth_rule` WHERE  `name` = 'check/wait' LIMIT 1 [ RunTime:0.032504s ]
+[ 2019-05-24T19:15:32+08:00 ][ sql ] [ SQL ] INSERT INTO `fa_auth_rule` (`pid` , `name` , `title` , `icon` , `remark` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (454 , 'check/wait' , 'Wait' , 'fa fa-circle-o' , '' , 1 , 'normal' , 1558696532 , 1558696532) [ RunTime:0.038505s ]
+[ 2019-05-24T19:15:32+08:00 ][ sql ] [ SQL ] SELECT `id` FROM `fa_auth_rule` WHERE  `name` = 'check/wait/index' LIMIT 1 [ RunTime:0.027504s ]
+[ 2019-05-24T19:15:33+08:00 ][ sql ] [ SQL ] SELECT `id` FROM `fa_auth_rule` WHERE  `name` = 'check/wait/add' LIMIT 1 [ RunTime:0.065009s ]
+[ 2019-05-24T19:15:33+08:00 ][ sql ] [ SQL ] SELECT `id` FROM `fa_auth_rule` WHERE  `name` = 'check/wait/edit' LIMIT 1 [ RunTime:0.027503s ]
+[ 2019-05-24T19:15:33+08:00 ][ sql ] [ SQL ] SELECT `id` FROM `fa_auth_rule` WHERE  `name` = 'check/wait/del' LIMIT 1 [ RunTime:0.027004s ]
+[ 2019-05-24T19:15:33+08:00 ][ sql ] [ SQL ] SELECT `id` FROM `fa_auth_rule` WHERE  `name` = 'check/wait/multi' LIMIT 1 [ RunTime:0.031504s ]
+[ 2019-05-24T19:15:33+08:00 ][ sql ] [ SQL ] INSERT INTO `fa_auth_rule` (`id` , `pid` , `name` , `icon` , `title` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (NULL , 460 , 'check/wait/index' , 'fa fa-circle-o' , '查看' , 0 , 'normal' , 1558696533 , 1558696533) [ RunTime:0.039505s ]
+[ 2019-05-24T19:15:33+08:00 ][ sql ] [ SQL ] INSERT INTO `fa_auth_rule` (`id` , `pid` , `name` , `icon` , `title` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (NULL , 460 , 'check/wait/add' , 'fa fa-circle-o' , '添加' , 0 , 'normal' , 1558696533 , 1558696533) [ RunTime:0.034504s ]
+[ 2019-05-24T19:15:33+08:00 ][ sql ] [ SQL ] INSERT INTO `fa_auth_rule` (`id` , `pid` , `name` , `icon` , `title` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (NULL , 460 , 'check/wait/edit' , 'fa fa-circle-o' , '编辑' , 0 , 'normal' , 1558696533 , 1558696533) [ RunTime:0.066008s ]
+[ 2019-05-24T19:15:33+08:00 ][ sql ] [ SQL ] INSERT INTO `fa_auth_rule` (`id` , `pid` , `name` , `icon` , `title` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (NULL , 460 , 'check/wait/del' , 'fa fa-circle-o' , '删除' , 0 , 'normal' , 1558696533 , 1558696533) [ RunTime:0.038505s ]
+[ 2019-05-24T19:15:33+08:00 ][ sql ] [ SQL ] INSERT INTO `fa_auth_rule` (`id` , `pid` , `name` , `icon` , `title` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (NULL , 460 , 'check/wait/multi' , 'fa fa-circle-o' , '批量更新' , 0 , 'normal' , 1558696533 , 1558696533) [ RunTime:0.032504s ]

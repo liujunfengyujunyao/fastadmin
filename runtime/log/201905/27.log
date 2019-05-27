@@ -1,0 +1,2750 @@
+---------------------------------------------------------------
+[ 2019-05-27T14:40:37+08:00 ] 192.168.1.144 GET 192.168.1.144:1161/admin/index/index
+[运行时间：0.192024s] [吞吐率：5.21req/s] [内存消耗：3,615.09kb] [文件加载：149]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.002000s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002500s ]
+[ info ] [ LANG ] D:\WWW\fastadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'uid=1; token=4be6253f-bdcc-450c-ab55-6936db486c16; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1557803993,1557901408,1558063476,1558143711; Hm_lvt_080836300300be57b7f34f4b3e97d911=1558329620; Hm_lvt_06e9734f33e7ff39eccc218a7043f30f=1557306234,1558345666; PHPSESSID=3djlasanb0fe4g55k6qhipsjq4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.1.144:1161/admin/dashboard?ref=addtabs',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => '192.168.1.144:1161',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002001s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin/lang/zh-cn/index.php
+[ info ] [ RUN ] app\admin\controller\Index->index[ D:\WWW\fastadmin\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\WWW\fastadmin\public/../application/admin\view\index\index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'menulist',
+  6 => 'navlist',
+  7 => 'fixedmenu',
+  8 => 'referermenu',
+  9 => 'title',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000500s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.021502s ] mysql:host=pipiyaode.mysql.rds.aliyuncs.com;dbname=fa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.014002s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.015502s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.014002s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.017502s ]
+---------------------------------------------------------------
+[ 2019-05-27T14:40:37+08:00 ] 192.168.1.144 GET 192.168.1.144:1161/admin/check/cost?addtabs=1
+[运行时间：0.183024s] [吞吐率：5.46req/s] [内存消耗：3,420.31kb] [文件加载：138]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.004000s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004000s ]
+[ info ] [ LANG ] D:\WWW\fastadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'check.cost',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'uid=1; token=4be6253f-bdcc-450c-ab55-6936db486c16; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1557803993,1557901408,1558063476,1558143711; Hm_lvt_080836300300be57b7f34f4b3e97d911=1558329620; Hm_lvt_06e9734f33e7ff39eccc218a7043f30f=1557306234,1558345666; PHPSESSID=3djlasanb0fe4g55k6qhipsjq4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.1.144:1161/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => '192.168.1.144:1161',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+)
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin/lang/zh-cn/check/cost.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\check\Cost->index[ D:\WWW\fastadmin\application\admin\controller\check\Cost.php ]
+[ info ] [ VIEW ] D:\WWW\fastadmin\public/../application/admin\view\check\cost\index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'typeList',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000000s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000500s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.024503s ] mysql:host=pipiyaode.mysql.rds.aliyuncs.com;dbname=fa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.016502s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.016502s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.014002s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.023003s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `fa_auth_rule` WHERE  `name` = 'check/cost' LIMIT 1 [ RunTime:0.012501s ]
+---------------------------------------------------------------
+[ 2019-05-27T14:40:38+08:00 ] 192.168.1.144 GET 192.168.1.144:1161/admin/dashboard?addtabs=1
+[运行时间：0.749096s] [吞吐率：1.33req/s] [内存消耗：3,515.06kb] [文件加载：139]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.003501s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003501s ]
+[ info ] [ LANG ] D:\WWW\fastadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'dashboard',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'uid=1; token=4be6253f-bdcc-450c-ab55-6936db486c16; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1557803993,1557901408,1558063476,1558143711; Hm_lvt_080836300300be57b7f34f4b3e97d911=1558329620; Hm_lvt_06e9734f33e7ff39eccc218a7043f30f=1557306234,1558345666; PHPSESSID=3djlasanb0fe4g55k6qhipsjq4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.1.144:1161/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => '192.168.1.144:1161',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+)
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin/lang/zh-cn/dashboard.php
+[ info ] [ RUN ] app\admin\controller\Dashboard->index[ D:\WWW\fastadmin\application\admin\controller\Dashboard.php ]
+[ info ] [ VIEW ] D:\WWW\fastadmin\public/../application/admin\view\dashboard\index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'totaluser',
+  6 => 'totalviews',
+  7 => 'totalorder',
+  8 => 'totalorderamount',
+  9 => 'todayusersignup',
+  10 => 'todayorder',
+  11 => 'unsettleorder',
+  12 => 'sevendnu',
+  13 => 'sevendau',
+  14 => 'paylist',
+  15 => 'createlist',
+  16 => 'group_id',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000500s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.018502s ] mysql:host=pipiyaode.mysql.rds.aliyuncs.com;dbname=fa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.019503s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.013501s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.015002s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.019503s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_admin` [ RunTime:0.013002s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.016002s ]
+[ sql ] [ SQL ] SELECT `group_id` FROM `fa_auth_group_access` WHERE  `uid` = 1 LIMIT 1 [ RunTime:0.012002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_wk_order` [ RunTime:0.014002s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_wk_order` WHERE  `add_time` BETWEEN 1558281600 AND 1558368000  AND (  1=1 ) LIMIT 1 [ RunTime:0.012501s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_wk_order` WHERE  `add_time` BETWEEN 1558281600 AND 1558368000  AND `order_status` = 2  AND (  1=1 ) LIMIT 1 [ RunTime:0.032504s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_wk_order` WHERE  `add_time` BETWEEN 1558368000 AND 1558454400  AND (  1=1 ) LIMIT 1 [ RunTime:0.014002s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_wk_order` WHERE  `add_time` BETWEEN 1558368000 AND 1558454400  AND `order_status` = 2  AND (  1=1 ) LIMIT 1 [ RunTime:0.017002s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_wk_order` WHERE  `add_time` BETWEEN 1558454400 AND 1558540800  AND (  1=1 ) LIMIT 1 [ RunTime:0.014501s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_wk_order` WHERE  `add_time` BETWEEN 1558454400 AND 1558540800  AND `order_status` = 2  AND (  1=1 ) LIMIT 1 [ RunTime:0.014502s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_wk_order` WHERE  `add_time` BETWEEN 1558540800 AND 1558627200  AND (  1=1 ) LIMIT 1 [ RunTime:0.015002s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_wk_order` WHERE  `add_time` BETWEEN 1558540800 AND 1558627200  AND `order_status` = 2  AND (  1=1 ) LIMIT 1 [ RunTime:0.013002s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_wk_order` WHERE  `add_time` BETWEEN 1558627200 AND 1558713600  AND (  1=1 ) LIMIT 1 [ RunTime:0.028004s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_wk_order` WHERE  `add_time` BETWEEN 1558627200 AND 1558713600  AND `order_status` = 2  AND (  1=1 ) LIMIT 1 [ RunTime:0.015002s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_wk_order` WHERE  `add_time` BETWEEN 1558713600 AND 1558800000  AND (  1=1 ) LIMIT 1 [ RunTime:0.013001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_wk_order` WHERE  `add_time` BETWEEN 1558713600 AND 1558800000  AND `order_status` = 2  AND (  1=1 ) LIMIT 1 [ RunTime:0.015002s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_wk_order` WHERE  `add_time` BETWEEN 1558800000 AND 1558886400  AND (  1=1 ) LIMIT 1 [ RunTime:0.014502s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_wk_order` WHERE  `add_time` BETWEEN 1558800000 AND 1558886400  AND `order_status` = 2  AND (  1=1 ) LIMIT 1 [ RunTime:0.012502s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_admin` LIMIT 1 [ RunTime:0.011501s ]
+[ sql ] [ SQL ] SELECT SUM(order_amount) AS tp_sum FROM `fa_wk_order` WHERE  `order_status` = 3  AND (  1=1 ) LIMIT 1 [ RunTime:0.012502s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_wk_order` WHERE  (  1=1 ) LIMIT 1 [ RunTime:0.013002s ]
+[ sql ] [ SQL ] SELECT SUM(order_amount) AS tp_sum FROM `fa_wk_order` WHERE  `order_status` = 2  AND (  1=1 ) LIMIT 1 [ RunTime:0.018002s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_admin` WHERE  `createtime` > 1558886400 LIMIT 1 [ RunTime:0.016002s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_wk_order` WHERE  `add_time` > 1558886400  AND (  1=1 ) LIMIT 1 [ RunTime:0.015002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_wk_user` [ RunTime:0.014502s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_wk_user` LIMIT 1 [ RunTime:0.012002s ]
+[ sql ] [ SQL ] SELECT SUM(order_amount) AS tp_sum FROM `fa_wk_order` WHERE  `order_status` = 3  AND `add_time` >= 1558886400  AND (  1=1 ) LIMIT 1 [ RunTime:0.022002s ]
+[ sql ] [ SQL ] SELECT SUM(order_amount) AS tp_sum FROM `fa_wk_order` WHERE  `order_status` = 2  AND `add_time` >= 1558886400  AND (  1=1 ) LIMIT 1 [ RunTime:0.016002s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `fa_auth_rule` WHERE  `name` = 'dashboard' LIMIT 1 [ RunTime:0.013001s ]
+---------------------------------------------------------------
+[ 2019-05-27T14:40:38+08:00 ] 192.168.1.144 GET 192.168.1.144:1161/admin/ajax/lang?callback=define&controllername=check.cost&v=1558939237
+[运行时间：0.512565s] [吞吐率：1.95req/s] [内存消耗：2,648.92kb] [文件加载：130]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.002501s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002501s ]
+[ info ] [ LANG ] D:\WWW\fastadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'uid=1; token=4be6253f-bdcc-450c-ab55-6936db486c16; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1557803993,1557901408,1558063476,1558143711; Hm_lvt_080836300300be57b7f34f4b3e97d911=1558329620; Hm_lvt_06e9734f33e7ff39eccc218a7043f30f=1557306234,1558345666; PHPSESSID=3djlasanb0fe4g55k6qhipsjq4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.1.144:1161/admin/check/cost?addtabs=1',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'connection' => 'close',
+  'host' => '192.168.1.144:1161',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'check.cost',
+  'v' => '1558939237',
+)
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ D:\WWW\fastadmin\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin/lang/zh-cn/check/cost.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000500s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-27T14:40:38+08:00 ] 192.168.1.144 GET 192.168.1.144:1161/admin/ajax/lang?callback=define&controllername=dashboard&v=1558939237
+[运行时间：0.081011s] [吞吐率：12.34req/s] [内存消耗：2,651.38kb] [文件加载：130]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000500s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.004500s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004500s ]
+[ info ] [ LANG ] D:\WWW\fastadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'uid=1; token=4be6253f-bdcc-450c-ab55-6936db486c16; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1557803993,1557901408,1558063476,1558143711; Hm_lvt_080836300300be57b7f34f4b3e97d911=1558329620; Hm_lvt_06e9734f33e7ff39eccc218a7043f30f=1557306234,1558345666; PHPSESSID=3djlasanb0fe4g55k6qhipsjq4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.1.144:1161/admin/dashboard?addtabs=1',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'connection' => 'close',
+  'host' => '192.168.1.144:1161',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'dashboard',
+  'v' => '1558939237',
+)
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002500s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ D:\WWW\fastadmin\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin/lang/zh-cn/dashboard.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000501s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-27T14:40:38+08:00 ] 192.168.1.144 GET 192.168.1.144:1161/admin/ajax/lang?callback=define&controllername=index&v=1558939237
+[运行时间：0.067508s] [吞吐率：14.81req/s] [内存消耗：2,652.02kb] [文件加载：130]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.003500s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003500s ]
+[ info ] [ LANG ] D:\WWW\fastadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'uid=1; token=4be6253f-bdcc-450c-ab55-6936db486c16; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1557803993,1557901408,1558063476,1558143711; Hm_lvt_080836300300be57b7f34f4b3e97d911=1558329620; Hm_lvt_06e9734f33e7ff39eccc218a7043f30f=1557306234,1558345666; PHPSESSID=3djlasanb0fe4g55k6qhipsjq4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.1.144:1161/admin/index/index',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'connection' => 'close',
+  'host' => '192.168.1.144:1161',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'index',
+  'v' => '1558939237',
+)
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002500s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ D:\WWW\fastadmin\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin/lang/zh-cn/index.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000500s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000500s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-27T14:40:38+08:00 ] 192.168.1.144 GET 192.168.1.144:1161/admin/check/cost/index?addtabs=1&sort=id&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1558939237641
+[运行时间：0.236530s] [吞吐率：4.23req/s] [内存消耗：3,543.65kb] [文件加载：140]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.004000s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004000s ]
+[ info ] [ LANG ] D:\WWW\fastadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'check.cost',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'uid=1; token=4be6253f-bdcc-450c-ab55-6936db486c16; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1557803993,1557901408,1558063476,1558143711; Hm_lvt_080836300300be57b7f34f4b3e97d911=1558329620; Hm_lvt_06e9734f33e7ff39eccc218a7043f30f=1557306234,1558345666; PHPSESSID=3djlasanb0fe4g55k6qhipsjq4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.1.144:1161/admin/check/cost?addtabs=1',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => '192.168.1.144:1161',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+  'sort' => 'id',
+  'order' => 'desc',
+  'offset' => '0',
+  'limit' => '10',
+  'filter' => '{}',
+  'op' => '{}',
+  '_' => '1558939237641',
+)
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin/lang/zh-cn/check/cost.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\check\Cost->index[ D:\WWW\fastadmin\application\admin\controller\check\Cost.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000500s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.025504s ] mysql:host=pipiyaode.mysql.rds.aliyuncs.com;dbname=fa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.013001s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.017002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.014002s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.014502s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.018002s ] mysql:host=pipiyaode.mysql.rds.aliyuncs.com;dbname=fa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_check_info` [ RunTime:0.014002s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_check_info` WHERE  `status` = 2 ORDER BY `id` DESC LIMIT 1 [ RunTime:0.017002s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_check_info` ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.020502s ]
+---------------------------------------------------------------
+[ 2019-05-27T14:40:39+08:00 ] 192.168.1.144 GET 192.168.1.144:1161/admin/check/cost/index?addtabs=1&sort=id&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1558939237642
+[运行时间：0.222028s] [吞吐率：4.50req/s] [内存消耗：3,543.65kb] [文件加载：140]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.004000s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004000s ]
+[ info ] [ LANG ] D:\WWW\fastadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'check.cost',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'uid=1; token=4be6253f-bdcc-450c-ab55-6936db486c16; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1557803993,1557901408,1558063476,1558143711; Hm_lvt_080836300300be57b7f34f4b3e97d911=1558329620; Hm_lvt_06e9734f33e7ff39eccc218a7043f30f=1557306234,1558345666; PHPSESSID=3djlasanb0fe4g55k6qhipsjq4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.1.144:1161/admin/check/cost?addtabs=1',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => '192.168.1.144:1161',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+  'sort' => 'id',
+  'order' => 'desc',
+  'offset' => '0',
+  'limit' => '10',
+  'filter' => '{}',
+  'op' => '{}',
+  '_' => '1558939237642',
+)
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001500s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin/lang/zh-cn/check/cost.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\check\Cost->index[ D:\WWW\fastadmin\application\admin\controller\check\Cost.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000000s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.027503s ] mysql:host=pipiyaode.mysql.rds.aliyuncs.com;dbname=fa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.015002s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.021503s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.013502s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.019002s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.025503s ] mysql:host=pipiyaode.mysql.rds.aliyuncs.com;dbname=fa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_check_info` [ RunTime:0.012002s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_check_info` WHERE  `status` = 2 ORDER BY `id` DESC LIMIT 1 [ RunTime:0.011501s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_check_info` ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.013002s ]
+---------------------------------------------------------------
+[ 2019-05-27T14:40:43+08:00 ] 192.168.1.144 GET 192.168.1.144:1161/admin/check/cost/detail/ids/6?addtabs=1
+[运行时间：0.432055s] [吞吐率：2.31req/s] [内存消耗：3,404.91kb] [文件加载：138]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.002000s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\WWW\fastadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'check.cost',
+    2 => 'detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'uid=1; token=4be6253f-bdcc-450c-ab55-6936db486c16; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1557803993,1557901408,1558063476,1558143711; Hm_lvt_080836300300be57b7f34f4b3e97d911=1558329620; Hm_lvt_06e9734f33e7ff39eccc218a7043f30f=1557306234,1558345666; PHPSESSID=3djlasanb0fe4g55k6qhipsjq4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.1.144:1161/admin/check/cost/detail/ids/6?ref=addtabs',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => '192.168.1.144:1161',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+  'ids' => '6',
+)
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin/lang/zh-cn/check/cost.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.320540s ] mysql:host=pipiyaode.mysql.rds.aliyuncs.com;dbname=fa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.015002s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.013002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.017502s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.015002s ]
+---------------------------------------------------------------
+[ 2019-05-27T14:43:16+08:00 ] 192.168.1.144 GET 192.168.1.144:1161/admin/check/cost/detail/ids/6?ref=addtabs
+[运行时间：0.192525s] [吞吐率：5.19req/s] [内存消耗：3,148.68kb] [文件加载：134]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.002000s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\WWW\fastadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'check.cost',
+    2 => 'detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'uid=1; token=4be6253f-bdcc-450c-ab55-6936db486c16; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1557803993,1557901408,1558063476,1558143711; Hm_lvt_080836300300be57b7f34f4b3e97d911=1558329620; Hm_lvt_06e9734f33e7ff39eccc218a7043f30f=1557306234,1558345666; PHPSESSID=3djlasanb0fe4g55k6qhipsjq4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.1.144:1161/admin/dashboard?ref=addtabs',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => '192.168.1.144:1161',
+)
+[ info ] [ PARAM ] array (
+  'ref' => 'addtabs',
+  'ids' => '6',
+)
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001500s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000000s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.001000s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.042506s ] mysql:host=pipiyaode.mysql.rds.aliyuncs.com;dbname=fa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.014502s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.027503s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.040005s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.015502s ]
+---------------------------------------------------------------
+[ 2019-05-27T14:43:17+08:00 ] 192.168.1.144 GET 192.168.1.144:1161/admin/index/index
+[运行时间：0.187523s] [吞吐率：5.33req/s] [内存消耗：3,613.98kb] [文件加载：149]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.002001s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002501s ]
+[ info ] [ LANG ] D:\WWW\fastadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'uid=1; token=4be6253f-bdcc-450c-ab55-6936db486c16; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1557803993,1557901408,1558063476,1558143711; Hm_lvt_080836300300be57b7f34f4b3e97d911=1558329620; Hm_lvt_06e9734f33e7ff39eccc218a7043f30f=1557306234,1558345666; PHPSESSID=3djlasanb0fe4g55k6qhipsjq4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.1.144:1161/admin/dashboard?ref=addtabs',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => '192.168.1.144:1161',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001500s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin/lang/zh-cn/index.php
+[ info ] [ RUN ] app\admin\controller\Index->index[ D:\WWW\fastadmin\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\WWW\fastadmin\public/../application/admin\view\index\index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'menulist',
+  6 => 'navlist',
+  7 => 'fixedmenu',
+  8 => 'referermenu',
+  9 => 'title',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000000s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000500s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.031004s ] mysql:host=pipiyaode.mysql.rds.aliyuncs.com;dbname=fa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.013502s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.015002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.014502s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.019502s ]
+---------------------------------------------------------------
+[ 2019-05-27T14:43:17+08:00 ] 192.168.1.144 GET 192.168.1.144:1161/admin/dashboard?addtabs=1
+[运行时间：0.581073s] [吞吐率：1.72req/s] [内存消耗：3,515.06kb] [文件加载：139]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.003500s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003500s ]
+[ info ] [ LANG ] D:\WWW\fastadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'dashboard',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'uid=1; token=4be6253f-bdcc-450c-ab55-6936db486c16; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1557803993,1557901408,1558063476,1558143711; Hm_lvt_080836300300be57b7f34f4b3e97d911=1558329620; Hm_lvt_06e9734f33e7ff39eccc218a7043f30f=1557306234,1558345666; PHPSESSID=3djlasanb0fe4g55k6qhipsjq4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.1.144:1161/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => '192.168.1.144:1161',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+)
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002500s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin/lang/zh-cn/dashboard.php
+[ info ] [ RUN ] app\admin\controller\Dashboard->index[ D:\WWW\fastadmin\application\admin\controller\Dashboard.php ]
+[ info ] [ VIEW ] D:\WWW\fastadmin\public/../application/admin\view\dashboard\index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'totaluser',
+  6 => 'totalviews',
+  7 => 'totalorder',
+  8 => 'totalorderamount',
+  9 => 'todayusersignup',
+  10 => 'todayorder',
+  11 => 'unsettleorder',
+  12 => 'sevendnu',
+  13 => 'sevendau',
+  14 => 'paylist',
+  15 => 'createlist',
+  16 => 'group_id',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000500s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.027503s ] mysql:host=pipiyaode.mysql.rds.aliyuncs.com;dbname=fa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.016002s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.016002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.014002s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.014002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_admin` [ RunTime:0.020003s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.018002s ]
+[ sql ] [ SQL ] SELECT `group_id` FROM `fa_auth_group_access` WHERE  `uid` = 1 LIMIT 1 [ RunTime:0.013002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_wk_order` [ RunTime:0.014502s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_wk_order` WHERE  `add_time` BETWEEN 1558281600 AND 1558368000  AND (  1=1 ) LIMIT 1 [ RunTime:0.020002s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_wk_order` WHERE  `add_time` BETWEEN 1558281600 AND 1558368000  AND `order_status` = 2  AND (  1=1 ) LIMIT 1 [ RunTime:0.017002s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_wk_order` WHERE  `add_time` BETWEEN 1558368000 AND 1558454400  AND (  1=1 ) LIMIT 1 [ RunTime:0.018003s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_wk_order` WHERE  `add_time` BETWEEN 1558368000 AND 1558454400  AND `order_status` = 2  AND (  1=1 ) LIMIT 1 [ RunTime:0.012501s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_wk_order` WHERE  `add_time` BETWEEN 1558454400 AND 1558540800  AND (  1=1 ) LIMIT 1 [ RunTime:0.019003s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_wk_order` WHERE  `add_time` BETWEEN 1558454400 AND 1558540800  AND `order_status` = 2  AND (  1=1 ) LIMIT 1 [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_wk_order` WHERE  `add_time` BETWEEN 1558540800 AND 1558627200  AND (  1=1 ) LIMIT 1 [ RunTime:0.013002s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_wk_order` WHERE  `add_time` BETWEEN 1558540800 AND 1558627200  AND `order_status` = 2  AND (  1=1 ) LIMIT 1 [ RunTime:0.017502s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_wk_order` WHERE  `add_time` BETWEEN 1558627200 AND 1558713600  AND (  1=1 ) LIMIT 1 [ RunTime:0.012002s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_wk_order` WHERE  `add_time` BETWEEN 1558627200 AND 1558713600  AND `order_status` = 2  AND (  1=1 ) LIMIT 1 [ RunTime:0.021503s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_wk_order` WHERE  `add_time` BETWEEN 1558713600 AND 1558800000  AND (  1=1 ) LIMIT 1 [ RunTime:0.013501s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_wk_order` WHERE  `add_time` BETWEEN 1558713600 AND 1558800000  AND `order_status` = 2  AND (  1=1 ) LIMIT 1 [ RunTime:0.016503s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_wk_order` WHERE  `add_time` BETWEEN 1558800000 AND 1558886400  AND (  1=1 ) LIMIT 1 [ RunTime:0.013501s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_wk_order` WHERE  `add_time` BETWEEN 1558800000 AND 1558886400  AND `order_status` = 2  AND (  1=1 ) LIMIT 1 [ RunTime:0.015002s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_admin` LIMIT 1 [ RunTime:0.009501s ]
+[ sql ] [ SQL ] SELECT SUM(order_amount) AS tp_sum FROM `fa_wk_order` WHERE  `order_status` = 3  AND (  1=1 ) LIMIT 1 [ RunTime:0.011502s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_wk_order` WHERE  (  1=1 ) LIMIT 1 [ RunTime:0.010001s ]
+[ sql ] [ SQL ] SELECT SUM(order_amount) AS tp_sum FROM `fa_wk_order` WHERE  `order_status` = 2  AND (  1=1 ) LIMIT 1 [ RunTime:0.009502s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_admin` WHERE  `createtime` > 1558886400 LIMIT 1 [ RunTime:0.011501s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_wk_order` WHERE  `add_time` > 1558886400  AND (  1=1 ) LIMIT 1 [ RunTime:0.009501s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_wk_user` [ RunTime:0.019003s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_wk_user` LIMIT 1 [ RunTime:0.010001s ]
+[ sql ] [ SQL ] SELECT SUM(order_amount) AS tp_sum FROM `fa_wk_order` WHERE  `order_status` = 3  AND `add_time` >= 1558886400  AND (  1=1 ) LIMIT 1 [ RunTime:0.013002s ]
+[ sql ] [ SQL ] SELECT SUM(order_amount) AS tp_sum FROM `fa_wk_order` WHERE  `order_status` = 2  AND `add_time` >= 1558886400  AND (  1=1 ) LIMIT 1 [ RunTime:0.015502s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `fa_auth_rule` WHERE  `name` = 'dashboard' LIMIT 1 [ RunTime:0.011501s ]
+---------------------------------------------------------------
+[ 2019-05-27T14:43:17+08:00 ] 192.168.1.144 GET 192.168.1.144:1161/admin/ajax/lang?callback=define&controllername=index&v=1558939396
+[运行时间：0.477561s] [吞吐率：2.09req/s] [内存消耗：2,652.02kb] [文件加载：130]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000500s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.003500s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003500s ]
+[ info ] [ LANG ] D:\WWW\fastadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'uid=1; token=4be6253f-bdcc-450c-ab55-6936db486c16; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1557803993,1557901408,1558063476,1558143711; Hm_lvt_080836300300be57b7f34f4b3e97d911=1558329620; Hm_lvt_06e9734f33e7ff39eccc218a7043f30f=1557306234,1558345666; PHPSESSID=3djlasanb0fe4g55k6qhipsjq4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.1.144:1161/admin/index/index',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'connection' => 'close',
+  'host' => '192.168.1.144:1161',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'index',
+  'v' => '1558939396',
+)
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002500s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ D:\WWW\fastadmin\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin/lang/zh-cn/index.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000500s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-27T14:43:17+08:00 ] 192.168.1.144 GET 192.168.1.144:1161/admin/ajax/lang?callback=define&controllername=dashboard&v=1558939397
+[运行时间：0.056507s] [吞吐率：17.70req/s] [内存消耗：2,651.38kb] [文件加载：130]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.004001s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004001s ]
+[ info ] [ LANG ] D:\WWW\fastadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'uid=1; token=4be6253f-bdcc-450c-ab55-6936db486c16; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1557803993,1557901408,1558063476,1558143711; Hm_lvt_080836300300be57b7f34f4b3e97d911=1558329620; Hm_lvt_06e9734f33e7ff39eccc218a7043f30f=1557306234,1558345666; PHPSESSID=3djlasanb0fe4g55k6qhipsjq4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.1.144:1161/admin/dashboard?addtabs=1',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'connection' => 'close',
+  'host' => '192.168.1.144:1161',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'dashboard',
+  'v' => '1558939397',
+)
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002501s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ D:\WWW\fastadmin\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin/lang/zh-cn/dashboard.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000000s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000500s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-27T14:43:18+08:00 ] 192.168.1.144 GET 192.168.1.144:1161/admin/check/cost/detail/ids/6?addtabs=1
+[运行时间：0.157520s] [吞吐率：6.35req/s] [内存消耗：3,412.10kb] [文件加载：138]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.002000s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\WWW\fastadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'check.cost',
+    2 => 'detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'uid=1; token=4be6253f-bdcc-450c-ab55-6936db486c16; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1557803993,1557901408,1558063476,1558143711; Hm_lvt_080836300300be57b7f34f4b3e97d911=1558329620; Hm_lvt_06e9734f33e7ff39eccc218a7043f30f=1557306234,1558345666; PHPSESSID=3djlasanb0fe4g55k6qhipsjq4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.1.144:1161/admin/check/cost/detail/ids/6?ref=addtabs',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => '192.168.1.144:1161',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+  'ids' => '6',
+)
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002001s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin/lang/zh-cn/check/cost.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\check\Cost->detail[ D:\WWW\fastadmin\application\admin\controller\check\Cost.php ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.026003s ] mysql:host=pipiyaode.mysql.rds.aliyuncs.com;dbname=fa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.017502s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.016502s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.014002s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.019503s ]
+[ error ] [0]致命错误: Class 'app\admin\controller\check\DB' not found[D:\WWW\fastadmin\application\admin\controller\check\Cost.php:81]
+---------------------------------------------------------------
+[ 2019-05-27T14:43:43+08:00 ] 192.168.1.144 GET 192.168.1.144:1161/admin/check/cost/detail/ids/6?ref=addtabs
+[运行时间：0.146019s] [吞吐率：6.85req/s] [内存消耗：3,148.59kb] [文件加载：134]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.003501s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003501s ]
+[ info ] [ LANG ] D:\WWW\fastadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'check.cost',
+    2 => 'detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'uid=1; token=4be6253f-bdcc-450c-ab55-6936db486c16; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1557803993,1557901408,1558063476,1558143711; Hm_lvt_080836300300be57b7f34f4b3e97d911=1558329620; Hm_lvt_06e9734f33e7ff39eccc218a7043f30f=1557306234,1558345666; PHPSESSID=3djlasanb0fe4g55k6qhipsjq4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.1.144:1161/admin/dashboard?ref=addtabs',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => '192.168.1.144:1161',
+)
+[ info ] [ PARAM ] array (
+  'ref' => 'addtabs',
+  'ids' => '6',
+)
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000500s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.001001s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.029003s ] mysql:host=pipiyaode.mysql.rds.aliyuncs.com;dbname=fa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.014502s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.013002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.016002s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.017502s ]
+---------------------------------------------------------------
+[ 2019-05-27T14:43:44+08:00 ] 192.168.1.144 GET 192.168.1.144:1161/admin/index/index
+[运行时间：0.415553s] [吞吐率：2.41req/s] [内存消耗：3,613.98kb] [文件加载：149]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.003500s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003500s ]
+[ info ] [ LANG ] D:\WWW\fastadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'uid=1; token=4be6253f-bdcc-450c-ab55-6936db486c16; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1557803993,1557901408,1558063476,1558143711; Hm_lvt_080836300300be57b7f34f4b3e97d911=1558329620; Hm_lvt_06e9734f33e7ff39eccc218a7043f30f=1557306234,1558345666; PHPSESSID=3djlasanb0fe4g55k6qhipsjq4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.1.144:1161/admin/dashboard?ref=addtabs',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => '192.168.1.144:1161',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002501s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin/lang/zh-cn/index.php
+[ info ] [ RUN ] app\admin\controller\Index->index[ D:\WWW\fastadmin\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\WWW\fastadmin\public/../application/admin\view\index\index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'menulist',
+  6 => 'navlist',
+  7 => 'fixedmenu',
+  8 => 'referermenu',
+  9 => 'title',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000000s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.023003s ] mysql:host=pipiyaode.mysql.rds.aliyuncs.com;dbname=fa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.029004s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.221528s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.013502s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.023503s ]
+---------------------------------------------------------------
+[ 2019-05-27T14:43:44+08:00 ] 192.168.1.144 GET 192.168.1.144:1161/admin/dashboard?addtabs=1
+[运行时间：0.600576s] [吞吐率：1.67req/s] [内存消耗：3,515.06kb] [文件加载：139]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.002500s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002500s ]
+[ info ] [ LANG ] D:\WWW\fastadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'dashboard',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'uid=1; token=4be6253f-bdcc-450c-ab55-6936db486c16; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1557803993,1557901408,1558063476,1558143711; Hm_lvt_080836300300be57b7f34f4b3e97d911=1558329620; Hm_lvt_06e9734f33e7ff39eccc218a7043f30f=1557306234,1558345666; PHPSESSID=3djlasanb0fe4g55k6qhipsjq4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.1.144:1161/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => '192.168.1.144:1161',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+)
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001500s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin/lang/zh-cn/dashboard.php
+[ info ] [ RUN ] app\admin\controller\Dashboard->index[ D:\WWW\fastadmin\application\admin\controller\Dashboard.php ]
+[ info ] [ VIEW ] D:\WWW\fastadmin\public/../application/admin\view\dashboard\index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'totaluser',
+  6 => 'totalviews',
+  7 => 'totalorder',
+  8 => 'totalorderamount',
+  9 => 'todayusersignup',
+  10 => 'todayorder',
+  11 => 'unsettleorder',
+  12 => 'sevendnu',
+  13 => 'sevendau',
+  14 => 'paylist',
+  15 => 'createlist',
+  16 => 'group_id',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000500s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.026504s ] mysql:host=pipiyaode.mysql.rds.aliyuncs.com;dbname=fa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.024503s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.013002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.018503s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_admin` [ RunTime:0.022503s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.013002s ]
+[ sql ] [ SQL ] SELECT `group_id` FROM `fa_auth_group_access` WHERE  `uid` = 1 LIMIT 1 [ RunTime:0.014002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_wk_order` [ RunTime:0.019002s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_wk_order` WHERE  `add_time` BETWEEN 1558281600 AND 1558368000  AND (  1=1 ) LIMIT 1 [ RunTime:0.017503s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_wk_order` WHERE  `add_time` BETWEEN 1558281600 AND 1558368000  AND `order_status` = 2  AND (  1=1 ) LIMIT 1 [ RunTime:0.015502s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_wk_order` WHERE  `add_time` BETWEEN 1558368000 AND 1558454400  AND (  1=1 ) LIMIT 1 [ RunTime:0.019502s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_wk_order` WHERE  `add_time` BETWEEN 1558368000 AND 1558454400  AND `order_status` = 2  AND (  1=1 ) LIMIT 1 [ RunTime:0.012002s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_wk_order` WHERE  `add_time` BETWEEN 1558454400 AND 1558540800  AND (  1=1 ) LIMIT 1 [ RunTime:0.016002s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_wk_order` WHERE  `add_time` BETWEEN 1558454400 AND 1558540800  AND `order_status` = 2  AND (  1=1 ) LIMIT 1 [ RunTime:0.017002s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_wk_order` WHERE  `add_time` BETWEEN 1558540800 AND 1558627200  AND (  1=1 ) LIMIT 1 [ RunTime:0.015502s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_wk_order` WHERE  `add_time` BETWEEN 1558540800 AND 1558627200  AND `order_status` = 2  AND (  1=1 ) LIMIT 1 [ RunTime:0.013502s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_wk_order` WHERE  `add_time` BETWEEN 1558627200 AND 1558713600  AND (  1=1 ) LIMIT 1 [ RunTime:0.013501s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_wk_order` WHERE  `add_time` BETWEEN 1558627200 AND 1558713600  AND `order_status` = 2  AND (  1=1 ) LIMIT 1 [ RunTime:0.013002s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_wk_order` WHERE  `add_time` BETWEEN 1558713600 AND 1558800000  AND (  1=1 ) LIMIT 1 [ RunTime:0.020003s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_wk_order` WHERE  `add_time` BETWEEN 1558713600 AND 1558800000  AND `order_status` = 2  AND (  1=1 ) LIMIT 1 [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_wk_order` WHERE  `add_time` BETWEEN 1558800000 AND 1558886400  AND (  1=1 ) LIMIT 1 [ RunTime:0.022503s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_wk_order` WHERE  `add_time` BETWEEN 1558800000 AND 1558886400  AND `order_status` = 2  AND (  1=1 ) LIMIT 1 [ RunTime:0.014002s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_admin` LIMIT 1 [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT SUM(order_amount) AS tp_sum FROM `fa_wk_order` WHERE  `order_status` = 3  AND (  1=1 ) LIMIT 1 [ RunTime:0.014502s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_wk_order` WHERE  (  1=1 ) LIMIT 1 [ RunTime:0.013502s ]
+[ sql ] [ SQL ] SELECT SUM(order_amount) AS tp_sum FROM `fa_wk_order` WHERE  `order_status` = 2  AND (  1=1 ) LIMIT 1 [ RunTime:0.012002s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_admin` WHERE  `createtime` > 1558886400 LIMIT 1 [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_wk_order` WHERE  `add_time` > 1558886400  AND (  1=1 ) LIMIT 1 [ RunTime:0.013002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_wk_user` [ RunTime:0.015002s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_wk_user` LIMIT 1 [ RunTime:0.013001s ]
+[ sql ] [ SQL ] SELECT SUM(order_amount) AS tp_sum FROM `fa_wk_order` WHERE  `order_status` = 3  AND `add_time` >= 1558886400  AND (  1=1 ) LIMIT 1 [ RunTime:0.013002s ]
+[ sql ] [ SQL ] SELECT SUM(order_amount) AS tp_sum FROM `fa_wk_order` WHERE  `order_status` = 2  AND `add_time` >= 1558886400  AND (  1=1 ) LIMIT 1 [ RunTime:0.013002s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `fa_auth_rule` WHERE  `name` = 'dashboard' LIMIT 1 [ RunTime:0.012002s ]
+---------------------------------------------------------------
+[ 2019-05-27T14:43:44+08:00 ] 192.168.1.144 GET 192.168.1.144:1161/admin/ajax/lang?callback=define&controllername=dashboard&v=1558939424
+[运行时间：0.041505s] [吞吐率：24.09req/s] [内存消耗：2,651.38kb] [文件加载：130]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.002001s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002001s ]
+[ info ] [ LANG ] D:\WWW\fastadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'uid=1; token=4be6253f-bdcc-450c-ab55-6936db486c16; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1557803993,1557901408,1558063476,1558143711; Hm_lvt_080836300300be57b7f34f4b3e97d911=1558329620; Hm_lvt_06e9734f33e7ff39eccc218a7043f30f=1557306234,1558345666; PHPSESSID=3djlasanb0fe4g55k6qhipsjq4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.1.144:1161/admin/dashboard?addtabs=1',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'connection' => 'close',
+  'host' => '192.168.1.144:1161',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'dashboard',
+  'v' => '1558939424',
+)
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001500s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ D:\WWW\fastadmin\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin/lang/zh-cn/dashboard.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000500s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-27T14:43:45+08:00 ] 192.168.1.144 GET 192.168.1.144:1161/admin/ajax/lang?callback=define&controllername=index&v=1558939423
+[运行时间：0.040505s] [吞吐率：24.69req/s] [内存消耗：2,652.02kb] [文件加载：130]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.002500s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002500s ]
+[ info ] [ LANG ] D:\WWW\fastadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'uid=1; token=4be6253f-bdcc-450c-ab55-6936db486c16; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1557803993,1557901408,1558063476,1558143711; Hm_lvt_080836300300be57b7f34f4b3e97d911=1558329620; Hm_lvt_06e9734f33e7ff39eccc218a7043f30f=1557306234,1558345666; PHPSESSID=3djlasanb0fe4g55k6qhipsjq4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.1.144:1161/admin/index/index',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'connection' => 'close',
+  'host' => '192.168.1.144:1161',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'index',
+  'v' => '1558939423',
+)
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001500s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ D:\WWW\fastadmin\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin/lang/zh-cn/index.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000500s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-27T14:43:45+08:00 ] 192.168.1.144 GET 192.168.1.144:1161/admin/check/cost/detail/ids/6?addtabs=1
+[运行时间：0.354545s] [吞吐率：2.82req/s] [内存消耗：3,522.82kb] [文件加载：139]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.003001s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003001s ]
+[ info ] [ LANG ] D:\WWW\fastadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'check.cost',
+    2 => 'detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'uid=1; token=4be6253f-bdcc-450c-ab55-6936db486c16; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1557803993,1557901408,1558063476,1558143711; Hm_lvt_080836300300be57b7f34f4b3e97d911=1558329620; Hm_lvt_06e9734f33e7ff39eccc218a7043f30f=1557306234,1558345666; PHPSESSID=3djlasanb0fe4g55k6qhipsjq4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.1.144:1161/admin/check/cost/detail/ids/6?ref=addtabs',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => '192.168.1.144:1161',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+  'ids' => '6',
+)
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin/lang/zh-cn/check/cost.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\check\Cost->detail[ D:\WWW\fastadmin\application\admin\controller\check\Cost.php ]
+[ info ] [ VIEW ] D:\WWW\fastadmin\public/../application/admin\view\check\cost\detail.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'typeList',
+  6 => 'type',
+  7 => 'row',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000500s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.025504s ] mysql:host=pipiyaode.mysql.rds.aliyuncs.com;dbname=fa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.026503s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.021003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.016502s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.020502s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_check_info` [ RunTime:0.021503s ]
+[ sql ] [ SQL ] SELECT `info` FROM `fa_check_info` WHERE  `id` = 6 LIMIT 1 [ RunTime:0.013501s ]
+[ sql ] [ SQL ] SELECT `type` FROM `fa_check_info` WHERE  `id` = 6 LIMIT 1 [ RunTime:0.012002s ]
+---------------------------------------------------------------
+[ 2019-05-27T14:43:46+08:00 ] 192.168.1.144 GET 192.168.1.144:1161/admin/ajax/lang?callback=define&controllername=check.cost&v=1558939425
+[运行时间：0.043505s] [吞吐率：22.99req/s] [内存消耗：2,648.94kb] [文件加载：130]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.002500s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002500s ]
+[ info ] [ LANG ] D:\WWW\fastadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'uid=1; token=4be6253f-bdcc-450c-ab55-6936db486c16; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1557803993,1557901408,1558063476,1558143711; Hm_lvt_080836300300be57b7f34f4b3e97d911=1558329620; Hm_lvt_06e9734f33e7ff39eccc218a7043f30f=1557306234,1558345666; PHPSESSID=3djlasanb0fe4g55k6qhipsjq4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.1.144:1161/admin/check/cost/detail/ids/6?addtabs=1',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'connection' => 'close',
+  'host' => '192.168.1.144:1161',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'check.cost',
+  'v' => '1558939425',
+)
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001500s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ D:\WWW\fastadmin\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin/lang/zh-cn/check/cost.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000500s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-27T14:43:48+08:00 ] 192.168.1.144 GET 192.168.1.144:1161/admin/check/cost?addtabs=1
+[运行时间：0.203026s] [吞吐率：4.93req/s] [内存消耗：3,422.80kb] [文件加载：138]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.002500s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002500s ]
+[ info ] [ LANG ] D:\WWW\fastadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'check.cost',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'uid=1; token=4be6253f-bdcc-450c-ab55-6936db486c16; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1557803993,1557901408,1558063476,1558143711; Hm_lvt_080836300300be57b7f34f4b3e97d911=1558329620; Hm_lvt_06e9734f33e7ff39eccc218a7043f30f=1557306234,1558345666; PHPSESSID=3djlasanb0fe4g55k6qhipsjq4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.1.144:1161/admin/check/cost?ref=addtabs',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => '192.168.1.144:1161',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+)
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001500s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin/lang/zh-cn/check/cost.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\check\Cost->index[ D:\WWW\fastadmin\application\admin\controller\check\Cost.php ]
+[ info ] [ VIEW ] D:\WWW\fastadmin\public/../application/admin\view\check\cost\index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'typeList',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000500s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.024004s ] mysql:host=pipiyaode.mysql.rds.aliyuncs.com;dbname=fa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.014502s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.015502s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.075510s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `fa_auth_rule` WHERE  `name` = 'check/cost' LIMIT 1 [ RunTime:0.014502s ]
+---------------------------------------------------------------
+[ 2019-05-27T14:43:48+08:00 ] 192.168.1.144 GET 192.168.1.144:1161/admin/ajax/lang?callback=define&controllername=check.cost&v=1558939428
+[运行时间：0.046006s] [吞吐率：21.74req/s] [内存消耗：2,648.92kb] [文件加载：130]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.002500s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002500s ]
+[ info ] [ LANG ] D:\WWW\fastadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'uid=1; token=4be6253f-bdcc-450c-ab55-6936db486c16; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1557803993,1557901408,1558063476,1558143711; Hm_lvt_080836300300be57b7f34f4b3e97d911=1558329620; Hm_lvt_06e9734f33e7ff39eccc218a7043f30f=1557306234,1558345666; PHPSESSID=3djlasanb0fe4g55k6qhipsjq4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.1.144:1161/admin/check/cost?addtabs=1',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'connection' => 'close',
+  'host' => '192.168.1.144:1161',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'check.cost',
+  'v' => '1558939428',
+)
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ D:\WWW\fastadmin\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin/lang/zh-cn/check/cost.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000000s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000500s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-27T14:43:49+08:00 ] 192.168.1.144 GET 192.168.1.144:1161/admin/check/cost/index?addtabs=1&sort=id&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1558939428701
+[运行时间：0.231029s] [吞吐率：4.33req/s] [内存消耗：3,546.12kb] [文件加载：140]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.003501s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003501s ]
+[ info ] [ LANG ] D:\WWW\fastadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'check.cost',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'uid=1; token=4be6253f-bdcc-450c-ab55-6936db486c16; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1557803993,1557901408,1558063476,1558143711; Hm_lvt_080836300300be57b7f34f4b3e97d911=1558329620; Hm_lvt_06e9734f33e7ff39eccc218a7043f30f=1557306234,1558345666; PHPSESSID=3djlasanb0fe4g55k6qhipsjq4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.1.144:1161/admin/check/cost?addtabs=1',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => '192.168.1.144:1161',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+  'sort' => 'id',
+  'order' => 'desc',
+  'offset' => '0',
+  'limit' => '10',
+  'filter' => '{}',
+  'op' => '{}',
+  '_' => '1558939428701',
+)
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002501s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin/lang/zh-cn/check/cost.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\check\Cost->index[ D:\WWW\fastadmin\application\admin\controller\check\Cost.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000500s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.026003s ] mysql:host=pipiyaode.mysql.rds.aliyuncs.com;dbname=fa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.016502s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.014502s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.014002s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.015001s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.022503s ] mysql:host=pipiyaode.mysql.rds.aliyuncs.com;dbname=fa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_check_info` [ RunTime:0.017502s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_check_info` WHERE  `status` = 2 ORDER BY `id` DESC LIMIT 1 [ RunTime:0.013002s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_check_info` ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.015002s ]
+---------------------------------------------------------------
+[ 2019-05-27T14:45:32+08:00 ] 192.168.1.144 GET 192.168.1.144:1161/admin/check/cost/index?addtabs=1&sort=id&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1558939428702
+[运行时间：0.235030s] [吞吐率：4.25req/s] [内存消耗：3,546.12kb] [文件加载：140]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.002500s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002500s ]
+[ info ] [ LANG ] D:\WWW\fastadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'check.cost',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'uid=1; token=4be6253f-bdcc-450c-ab55-6936db486c16; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1557803993,1557901408,1558063476,1558143711; Hm_lvt_080836300300be57b7f34f4b3e97d911=1558329620; Hm_lvt_06e9734f33e7ff39eccc218a7043f30f=1557306234,1558345666; PHPSESSID=3djlasanb0fe4g55k6qhipsjq4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.1.144:1161/admin/check/cost?addtabs=1',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => '192.168.1.144:1161',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+  'sort' => 'id',
+  'order' => 'desc',
+  'offset' => '0',
+  'limit' => '10',
+  'filter' => '{}',
+  'op' => '{}',
+  '_' => '1558939428702',
+)
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001501s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin/lang/zh-cn/check/cost.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\check\Cost->index[ D:\WWW\fastadmin\application\admin\controller\check\Cost.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000000s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.034505s ] mysql:host=pipiyaode.mysql.rds.aliyuncs.com;dbname=fa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.014002s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.014501s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.024003s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.016002s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.020503s ] mysql:host=pipiyaode.mysql.rds.aliyuncs.com;dbname=fa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_check_info` [ RunTime:0.014502s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_check_info` WHERE  `status` = 2 ORDER BY `id` DESC LIMIT 1 [ RunTime:0.010501s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_check_info` ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.017502s ]
+---------------------------------------------------------------
+[ 2019-05-27T14:45:37+08:00 ] 192.168.1.144 GET 192.168.1.144:1161/admin/check/cost/detail/ids/6?ref=addtabs
+[运行时间：0.130517s] [吞吐率：7.66req/s] [内存消耗：3,148.59kb] [文件加载：134]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.002000s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\WWW\fastadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'check.cost',
+    2 => 'detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'uid=1; token=4be6253f-bdcc-450c-ab55-6936db486c16; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1557803993,1557901408,1558063476,1558143711; Hm_lvt_080836300300be57b7f34f4b3e97d911=1558329620; Hm_lvt_06e9734f33e7ff39eccc218a7043f30f=1557306234,1558345666; PHPSESSID=3djlasanb0fe4g55k6qhipsjq4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.1.144:1161/admin/dashboard?ref=addtabs',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => '192.168.1.144:1161',
+)
+[ info ] [ PARAM ] array (
+  'ref' => 'addtabs',
+  'ids' => '6',
+)
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001501s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000500s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.001000s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.021003s ] mysql:host=pipiyaode.mysql.rds.aliyuncs.com;dbname=fa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.012501s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.013002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.019003s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.014502s ]
+---------------------------------------------------------------
+[ 2019-05-27T14:45:38+08:00 ] 192.168.1.144 GET 192.168.1.144:1161/admin/index/index
+[运行时间：0.195025s] [吞吐率：5.13req/s] [内存消耗：3,613.98kb] [文件加载：149]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.002000s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002500s ]
+[ info ] [ LANG ] D:\WWW\fastadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'uid=1; token=4be6253f-bdcc-450c-ab55-6936db486c16; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1557803993,1557901408,1558063476,1558143711; Hm_lvt_080836300300be57b7f34f4b3e97d911=1558329620; Hm_lvt_06e9734f33e7ff39eccc218a7043f30f=1557306234,1558345666; PHPSESSID=3djlasanb0fe4g55k6qhipsjq4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.1.144:1161/admin/dashboard?ref=addtabs',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => '192.168.1.144:1161',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001500s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin/lang/zh-cn/index.php
+[ info ] [ RUN ] app\admin\controller\Index->index[ D:\WWW\fastadmin\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\WWW\fastadmin\public/../application/admin\view\index\index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'menulist',
+  6 => 'navlist',
+  7 => 'fixedmenu',
+  8 => 'referermenu',
+  9 => 'title',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000500s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000500s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.022003s ] mysql:host=pipiyaode.mysql.rds.aliyuncs.com;dbname=fa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.013502s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.013002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.020002s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.021003s ]
+---------------------------------------------------------------
+[ 2019-05-27T14:45:38+08:00 ] 192.168.1.144 GET 192.168.1.144:1161/admin/dashboard?addtabs=1
+[运行时间：0.576573s] [吞吐率：1.73req/s] [内存消耗：3,515.06kb] [文件加载：139]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.003500s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003500s ]
+[ info ] [ LANG ] D:\WWW\fastadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'dashboard',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'uid=1; token=4be6253f-bdcc-450c-ab55-6936db486c16; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1557803993,1557901408,1558063476,1558143711; Hm_lvt_080836300300be57b7f34f4b3e97d911=1558329620; Hm_lvt_06e9734f33e7ff39eccc218a7043f30f=1557306234,1558345666; PHPSESSID=3djlasanb0fe4g55k6qhipsjq4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.1.144:1161/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => '192.168.1.144:1161',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+)
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001500s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin/lang/zh-cn/dashboard.php
+[ info ] [ RUN ] app\admin\controller\Dashboard->index[ D:\WWW\fastadmin\application\admin\controller\Dashboard.php ]
+[ info ] [ VIEW ] D:\WWW\fastadmin\public/../application/admin\view\dashboard\index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'totaluser',
+  6 => 'totalviews',
+  7 => 'totalorder',
+  8 => 'totalorderamount',
+  9 => 'todayusersignup',
+  10 => 'todayorder',
+  11 => 'unsettleorder',
+  12 => 'sevendnu',
+  13 => 'sevendau',
+  14 => 'paylist',
+  15 => 'createlist',
+  16 => 'group_id',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000500s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.047006s ] mysql:host=pipiyaode.mysql.rds.aliyuncs.com;dbname=fa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.024003s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.020003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.014002s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.016002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_admin` [ RunTime:0.022003s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.012501s ]
+[ sql ] [ SQL ] SELECT `group_id` FROM `fa_auth_group_access` WHERE  `uid` = 1 LIMIT 1 [ RunTime:0.012002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_wk_order` [ RunTime:0.013502s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_wk_order` WHERE  `add_time` BETWEEN 1558281600 AND 1558368000  AND (  1=1 ) LIMIT 1 [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_wk_order` WHERE  `add_time` BETWEEN 1558281600 AND 1558368000  AND `order_status` = 2  AND (  1=1 ) LIMIT 1 [ RunTime:0.011502s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_wk_order` WHERE  `add_time` BETWEEN 1558368000 AND 1558454400  AND (  1=1 ) LIMIT 1 [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_wk_order` WHERE  `add_time` BETWEEN 1558368000 AND 1558454400  AND `order_status` = 2  AND (  1=1 ) LIMIT 1 [ RunTime:0.011002s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_wk_order` WHERE  `add_time` BETWEEN 1558454400 AND 1558540800  AND (  1=1 ) LIMIT 1 [ RunTime:0.013002s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_wk_order` WHERE  `add_time` BETWEEN 1558454400 AND 1558540800  AND `order_status` = 2  AND (  1=1 ) LIMIT 1 [ RunTime:0.011501s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_wk_order` WHERE  `add_time` BETWEEN 1558540800 AND 1558627200  AND (  1=1 ) LIMIT 1 [ RunTime:0.013502s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_wk_order` WHERE  `add_time` BETWEEN 1558540800 AND 1558627200  AND `order_status` = 2  AND (  1=1 ) LIMIT 1 [ RunTime:0.012501s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_wk_order` WHERE  `add_time` BETWEEN 1558627200 AND 1558713600  AND (  1=1 ) LIMIT 1 [ RunTime:0.011502s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_wk_order` WHERE  `add_time` BETWEEN 1558627200 AND 1558713600  AND `order_status` = 2  AND (  1=1 ) LIMIT 1 [ RunTime:0.014502s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_wk_order` WHERE  `add_time` BETWEEN 1558713600 AND 1558800000  AND (  1=1 ) LIMIT 1 [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_wk_order` WHERE  `add_time` BETWEEN 1558713600 AND 1558800000  AND `order_status` = 2  AND (  1=1 ) LIMIT 1 [ RunTime:0.012002s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_wk_order` WHERE  `add_time` BETWEEN 1558800000 AND 1558886400  AND (  1=1 ) LIMIT 1 [ RunTime:0.013002s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_wk_order` WHERE  `add_time` BETWEEN 1558800000 AND 1558886400  AND `order_status` = 2  AND (  1=1 ) LIMIT 1 [ RunTime:0.017502s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_admin` LIMIT 1 [ RunTime:0.012501s ]
+[ sql ] [ SQL ] SELECT SUM(order_amount) AS tp_sum FROM `fa_wk_order` WHERE  `order_status` = 3  AND (  1=1 ) LIMIT 1 [ RunTime:0.016503s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_wk_order` WHERE  (  1=1 ) LIMIT 1 [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT SUM(order_amount) AS tp_sum FROM `fa_wk_order` WHERE  `order_status` = 2  AND (  1=1 ) LIMIT 1 [ RunTime:0.012002s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_admin` WHERE  `createtime` > 1558886400 LIMIT 1 [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_wk_order` WHERE  `add_time` > 1558886400  AND (  1=1 ) LIMIT 1 [ RunTime:0.011002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_wk_user` [ RunTime:0.012501s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_wk_user` LIMIT 1 [ RunTime:0.011002s ]
+[ sql ] [ SQL ] SELECT SUM(order_amount) AS tp_sum FROM `fa_wk_order` WHERE  `order_status` = 3  AND `add_time` >= 1558886400  AND (  1=1 ) LIMIT 1 [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT SUM(order_amount) AS tp_sum FROM `fa_wk_order` WHERE  `order_status` = 2  AND `add_time` >= 1558886400  AND (  1=1 ) LIMIT 1 [ RunTime:0.013502s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `fa_auth_rule` WHERE  `name` = 'dashboard' LIMIT 1 [ RunTime:0.012002s ]
+---------------------------------------------------------------
+[ 2019-05-27T14:45:38+08:00 ] 192.168.1.144 GET 192.168.1.144:1161/admin/ajax/lang?callback=define&controllername=dashboard&v=1558939538
+[运行时间：0.050507s] [吞吐率：19.80req/s] [内存消耗：2,651.38kb] [文件加载：130]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.002500s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002500s ]
+[ info ] [ LANG ] D:\WWW\fastadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'uid=1; token=4be6253f-bdcc-450c-ab55-6936db486c16; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1557803993,1557901408,1558063476,1558143711; Hm_lvt_080836300300be57b7f34f4b3e97d911=1558329620; Hm_lvt_06e9734f33e7ff39eccc218a7043f30f=1557306234,1558345666; PHPSESSID=3djlasanb0fe4g55k6qhipsjq4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.1.144:1161/admin/dashboard?addtabs=1',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'connection' => 'close',
+  'host' => '192.168.1.144:1161',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'dashboard',
+  'v' => '1558939538',
+)
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.003000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ D:\WWW\fastadmin\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin/lang/zh-cn/dashboard.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000500s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-27T14:45:39+08:00 ] 192.168.1.144 GET 192.168.1.144:1161/admin/ajax/lang?callback=define&controllername=index&v=1558939538
+[运行时间：0.042006s] [吞吐率：23.81req/s] [内存消耗：2,652.02kb] [文件加载：130]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.002000s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\WWW\fastadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'uid=1; token=4be6253f-bdcc-450c-ab55-6936db486c16; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1557803993,1557901408,1558063476,1558143711; Hm_lvt_080836300300be57b7f34f4b3e97d911=1558329620; Hm_lvt_06e9734f33e7ff39eccc218a7043f30f=1557306234,1558345666; PHPSESSID=3djlasanb0fe4g55k6qhipsjq4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.1.144:1161/admin/index/index',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'connection' => 'close',
+  'host' => '192.168.1.144:1161',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'index',
+  'v' => '1558939538',
+)
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002501s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ D:\WWW\fastadmin\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin/lang/zh-cn/index.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000000s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000500s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-27T14:45:39+08:00 ] 192.168.1.144 GET 192.168.1.144:1161/admin/check/cost/detail/ids/6?addtabs=1
+[运行时间：0.324541s] [吞吐率：3.08req/s] [内存消耗：3,523.32kb] [文件加载：139]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.003501s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003501s ]
+[ info ] [ LANG ] D:\WWW\fastadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'check.cost',
+    2 => 'detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'uid=1; token=4be6253f-bdcc-450c-ab55-6936db486c16; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1557803993,1557901408,1558063476,1558143711; Hm_lvt_080836300300be57b7f34f4b3e97d911=1558329620; Hm_lvt_06e9734f33e7ff39eccc218a7043f30f=1557306234,1558345666; PHPSESSID=3djlasanb0fe4g55k6qhipsjq4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.1.144:1161/admin/check/cost/detail/ids/6?ref=addtabs',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => '192.168.1.144:1161',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+  'ids' => '6',
+)
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001500s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin/lang/zh-cn/check/cost.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\check\Cost->detail[ D:\WWW\fastadmin\application\admin\controller\check\Cost.php ]
+[ info ] [ VIEW ] D:\WWW\fastadmin\public/../application/admin\view\check\cost\detail.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'typeList',
+  6 => 'type',
+  7 => 'row',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000000s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.019502s ] mysql:host=pipiyaode.mysql.rds.aliyuncs.com;dbname=fa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.013002s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.013002s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.018002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_check_info` [ RunTime:0.013002s ]
+[ sql ] [ SQL ] SELECT `info` FROM `fa_check_info` WHERE  `id` = 6 LIMIT 1 [ RunTime:0.013002s ]
+[ sql ] [ SQL ] SELECT `type` FROM `fa_check_info` WHERE  `id` = 6 LIMIT 1 [ RunTime:0.015502s ]
+---------------------------------------------------------------
+[ 2019-05-27T14:45:40+08:00 ] 192.168.1.144 GET 192.168.1.144:1161/admin/ajax/lang?callback=define&controllername=check.cost&v=1558939539
+[运行时间：0.072510s] [吞吐率：13.79req/s] [内存消耗：2,648.94kb] [文件加载：130]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000500s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.004501s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004501s ]
+[ info ] [ LANG ] D:\WWW\fastadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'uid=1; token=4be6253f-bdcc-450c-ab55-6936db486c16; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1557803993,1557901408,1558063476,1558143711; Hm_lvt_080836300300be57b7f34f4b3e97d911=1558329620; Hm_lvt_06e9734f33e7ff39eccc218a7043f30f=1557306234,1558345666; PHPSESSID=3djlasanb0fe4g55k6qhipsjq4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.1.144:1161/admin/check/cost/detail/ids/6?addtabs=1',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'connection' => 'close',
+  'host' => '192.168.1.144:1161',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'check.cost',
+  'v' => '1558939539',
+)
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002500s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ D:\WWW\fastadmin\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin/lang/zh-cn/check/cost.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000500s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000500s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-27T14:45:47+08:00 ] 192.168.1.144 GET 192.168.1.144:1161/admin/check/cost?addtabs=1
+[运行时间：0.175523s] [吞吐率：5.70req/s] [内存消耗：3,422.80kb] [文件加载：138]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.003501s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003501s ]
+[ info ] [ LANG ] D:\WWW\fastadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'check.cost',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'uid=1; token=4be6253f-bdcc-450c-ab55-6936db486c16; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1557803993,1557901408,1558063476,1558143711; Hm_lvt_080836300300be57b7f34f4b3e97d911=1558329620; Hm_lvt_06e9734f33e7ff39eccc218a7043f30f=1557306234,1558345666; PHPSESSID=3djlasanb0fe4g55k6qhipsjq4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.1.144:1161/admin/check/cost?ref=addtabs',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => '192.168.1.144:1161',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+)
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin/lang/zh-cn/check/cost.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\check\Cost->index[ D:\WWW\fastadmin\application\admin\controller\check\Cost.php ]
+[ info ] [ VIEW ] D:\WWW\fastadmin\public/../application/admin\view\check\cost\index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'typeList',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000500s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.014502s ] mysql:host=pipiyaode.mysql.rds.aliyuncs.com;dbname=fa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.011501s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.031004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.011001s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `fa_auth_rule` WHERE  `name` = 'check/cost' LIMIT 1 [ RunTime:0.011501s ]
+---------------------------------------------------------------
+[ 2019-05-27T14:45:47+08:00 ] 192.168.1.144 GET 192.168.1.144:1161/admin/ajax/lang?callback=define&controllername=check.cost&v=1558939547
+[运行时间：0.064508s] [吞吐率：15.50req/s] [内存消耗：2,648.92kb] [文件加载：130]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.003001s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003001s ]
+[ info ] [ LANG ] D:\WWW\fastadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'uid=1; token=4be6253f-bdcc-450c-ab55-6936db486c16; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1557803993,1557901408,1558063476,1558143711; Hm_lvt_080836300300be57b7f34f4b3e97d911=1558329620; Hm_lvt_06e9734f33e7ff39eccc218a7043f30f=1557306234,1558345666; PHPSESSID=3djlasanb0fe4g55k6qhipsjq4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.1.144:1161/admin/check/cost?addtabs=1',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'connection' => 'close',
+  'host' => '192.168.1.144:1161',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'check.cost',
+  'v' => '1558939547',
+)
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001500s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ D:\WWW\fastadmin\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin/lang/zh-cn/check/cost.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000500s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-27T14:45:48+08:00 ] 192.168.1.144 GET 192.168.1.144:1161/admin/check/cost/index?addtabs=1&sort=id&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1558939547665
+[运行时间：0.243531s] [吞吐率：4.11req/s] [内存消耗：3,546.12kb] [文件加载：140]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.004001s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004001s ]
+[ info ] [ LANG ] D:\WWW\fastadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'check.cost',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'uid=1; token=4be6253f-bdcc-450c-ab55-6936db486c16; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1557803993,1557901408,1558063476,1558143711; Hm_lvt_080836300300be57b7f34f4b3e97d911=1558329620; Hm_lvt_06e9734f33e7ff39eccc218a7043f30f=1557306234,1558345666; PHPSESSID=3djlasanb0fe4g55k6qhipsjq4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.1.144:1161/admin/check/cost?addtabs=1',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => '192.168.1.144:1161',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+  'sort' => 'id',
+  'order' => 'desc',
+  'offset' => '0',
+  'limit' => '10',
+  'filter' => '{}',
+  'op' => '{}',
+  '_' => '1558939547665',
+)
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002001s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin/lang/zh-cn/check/cost.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\check\Cost->index[ D:\WWW\fastadmin\application\admin\controller\check\Cost.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000500s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.021503s ] mysql:host=pipiyaode.mysql.rds.aliyuncs.com;dbname=fa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.014502s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.017502s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.015002s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.015502s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.020503s ] mysql:host=pipiyaode.mysql.rds.aliyuncs.com;dbname=fa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_check_info` [ RunTime:0.014501s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_check_info` WHERE  `status` = 2 ORDER BY `id` DESC LIMIT 1 [ RunTime:0.015002s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_check_info` ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.014002s ]
+---------------------------------------------------------------
+[ 2019-05-27T14:45:57+08:00 ] 192.168.1.144 GET 192.168.1.144:1161/admin/check/cost/detail/ids/6?addtabs=1
+[运行时间：7.823994s] [吞吐率：0.13req/s] [内存消耗：3,375.67kb] [文件加载：137]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.004001s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004001s ]
+[ info ] [ LANG ] D:\WWW\fastadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'check.cost',
+    2 => 'detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'uid=1; token=4be6253f-bdcc-450c-ab55-6936db486c16; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1557803993,1557901408,1558063476,1558143711; Hm_lvt_080836300300be57b7f34f4b3e97d911=1558329620; Hm_lvt_06e9734f33e7ff39eccc218a7043f30f=1557306234,1558345666; PHPSESSID=3djlasanb0fe4g55k6qhipsjq4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.1.144:1161/admin/check/cost/detail/ids/6?ref=addtabs',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => '192.168.1.144:1161',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+  'ids' => '6',
+)
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001500s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin/lang/zh-cn/check/cost.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\check\Cost->detail[ D:\WWW\fastadmin\application\admin\controller\check\Cost.php ]
+[ info ] [ VIEW ] D:\WWW\fastadmin\public/../application/admin\view\check\cost\detail.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'typeList',
+  6 => 'type',
+  7 => 'row',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000500s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.195152s ] mysql:host=pipiyaode.mysql.rds.aliyuncs.com;dbname=fa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.593075s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.999127s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.737593s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:1.786727s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_check_info` [ RunTime:0.606577s ]
+[ sql ] [ SQL ] SELECT `info` FROM `fa_check_info` WHERE  `id` = 6 LIMIT 1 [ RunTime:1.149646s ]
+[ sql ] [ SQL ] SELECT `type` FROM `fa_check_info` WHERE  `id` = 6 LIMIT 1 [ RunTime:0.679086s ]
+---------------------------------------------------------------
+[ 2019-05-27T14:46:07+08:00 ] 192.168.1.144 GET 192.168.1.144:1161/admin/check/cost/index?addtabs=1&sort=id&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1558939547666
+[运行时间：12.881136s] [吞吐率：0.08req/s] [内存消耗：3,546.12kb] [文件加载：140]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.003500s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003500s ]
+[ info ] [ LANG ] D:\WWW\fastadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'check.cost',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'uid=1; token=4be6253f-bdcc-450c-ab55-6936db486c16; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1557803993,1557901408,1558063476,1558143711; Hm_lvt_080836300300be57b7f34f4b3e97d911=1558329620; Hm_lvt_06e9734f33e7ff39eccc218a7043f30f=1557306234,1558345666; PHPSESSID=3djlasanb0fe4g55k6qhipsjq4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.1.144:1161/admin/check/cost?addtabs=1',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => '192.168.1.144:1161',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+  'sort' => 'id',
+  'order' => 'desc',
+  'offset' => '0',
+  'limit' => '10',
+  'filter' => '{}',
+  'op' => '{}',
+  '_' => '1558939547666',
+)
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002500s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin/lang/zh-cn/check/cost.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\check\Cost->index[ D:\WWW\fastadmin\application\admin\controller\check\Cost.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000500s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.162648s ] mysql:host=pipiyaode.mysql.rds.aliyuncs.com;dbname=fa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:2.276789s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.716091s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.139517s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:1.345171s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:1.382676s ] mysql:host=pipiyaode.mysql.rds.aliyuncs.com;dbname=fa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_check_info` [ RunTime:0.801601s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_check_info` WHERE  `status` = 2 ORDER BY `id` DESC LIMIT 1 [ RunTime:1.170649s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_check_info` ORDER BY `id` DESC LIMIT 0,10 [ RunTime:1.129643s ]
+---------------------------------------------------------------
+[ 2019-05-27T14:46:07+08:00 ] 192.168.1.144 GET 192.168.1.144:1161/admin/ajax/lang?callback=define&controllername=check.cost&v=1558939549
+[运行时间：10.024273s] [吞吐率：0.10req/s] [内存消耗：2,648.94kb] [文件加载：130]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.003000s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003000s ]
+[ info ] [ LANG ] D:\WWW\fastadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'uid=1; token=4be6253f-bdcc-450c-ab55-6936db486c16; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1557803993,1557901408,1558063476,1558143711; Hm_lvt_080836300300be57b7f34f4b3e97d911=1558329620; Hm_lvt_06e9734f33e7ff39eccc218a7043f30f=1557306234,1558345666; PHPSESSID=3djlasanb0fe4g55k6qhipsjq4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.1.144:1161/admin/check/cost/detail/ids/6?addtabs=1',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'connection' => 'close',
+  'host' => '192.168.1.144:1161',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'check.cost',
+  'v' => '1558939549',
+)
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001500s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ D:\WWW\fastadmin\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin/lang/zh-cn/check/cost.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000500s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-27T14:46:11+08:00 ] 192.168.1.144 GET 192.168.1.144:1161/admin/check/cost/index?addtabs=1&sort=id&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1558939547667
+[运行时间：13.836257s] [吞吐率：0.07req/s] [内存消耗：3,546.12kb] [文件加载：140]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.002500s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002500s ]
+[ info ] [ LANG ] D:\WWW\fastadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'check.cost',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'uid=1; token=4be6253f-bdcc-450c-ab55-6936db486c16; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1557803993,1557901408,1558063476,1558143711; Hm_lvt_080836300300be57b7f34f4b3e97d911=1558329620; Hm_lvt_06e9734f33e7ff39eccc218a7043f30f=1557306234,1558345666; PHPSESSID=3djlasanb0fe4g55k6qhipsjq4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.1.144:1161/admin/check/cost?addtabs=1',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => '192.168.1.144:1161',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+  'sort' => 'id',
+  'order' => 'desc',
+  'offset' => '0',
+  'limit' => '10',
+  'filter' => '{}',
+  'op' => '{}',
+  '_' => '1558939547667',
+)
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.003001s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin/lang/zh-cn/check/cost.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\check\Cost->index[ D:\WWW\fastadmin\application\admin\controller\check\Cost.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000000s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000500s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.059635s ] mysql:host=pipiyaode.mysql.rds.aliyuncs.com;dbname=fa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.528567s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.224528s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.607078s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.581073s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.301039s ] mysql:host=pipiyaode.mysql.rds.aliyuncs.com;dbname=fa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_check_info` [ RunTime:0.222528s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_check_info` WHERE  `status` = 2 ORDER BY `id` DESC LIMIT 1 [ RunTime:0.373047s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_check_info` ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.381549s ]
+---------------------------------------------------------------
+[ 2019-05-27T14:46:16+08:00 ] 192.168.1.144 GET 192.168.1.144:1161/admin/check/cost/index?addtabs=1&sort=id&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1558939547668
+[运行时间：17.557230s] [吞吐率：0.06req/s] [内存消耗：3,546.12kb] [文件加载：140]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.002500s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002500s ]
+[ info ] [ LANG ] D:\WWW\fastadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'check.cost',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'uid=1; token=4be6253f-bdcc-450c-ab55-6936db486c16; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1557803993,1557901408,1558063476,1558143711; Hm_lvt_080836300300be57b7f34f4b3e97d911=1558329620; Hm_lvt_06e9734f33e7ff39eccc218a7043f30f=1557306234,1558345666; PHPSESSID=3djlasanb0fe4g55k6qhipsjq4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.1.144:1161/admin/check/cost?addtabs=1',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => '192.168.1.144:1161',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+  'sort' => 'id',
+  'order' => 'desc',
+  'offset' => '0',
+  'limit' => '10',
+  'filter' => '{}',
+  'op' => '{}',
+  '_' => '1558939547668',
+)
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001501s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin/lang/zh-cn/check/cost.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\check\Cost->index[ D:\WWW\fastadmin\application\admin\controller\check\Cost.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.001000s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.194151s ] mysql:host=pipiyaode.mysql.rds.aliyuncs.com;dbname=fa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.500564s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.347044s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.486062s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.624579s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.309540s ] mysql:host=pipiyaode.mysql.rds.aliyuncs.com;dbname=fa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_check_info` [ RunTime:0.926117s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_check_info` WHERE  `status` = 2 ORDER BY `id` DESC LIMIT 1 [ RunTime:0.317041s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_check_info` ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.295537s ]
+---------------------------------------------------------------
+[ 2019-05-27T14:46:18+08:00 ] 192.168.1.144 GET 192.168.1.144:1161/admin/check/cost/index?addtabs=1&sort=id&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1558939547669
+[运行时间：12.888137s] [吞吐率：0.08req/s] [内存消耗：3,546.12kb] [文件加载：140]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.002000s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\WWW\fastadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'check.cost',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'uid=1; token=4be6253f-bdcc-450c-ab55-6936db486c16; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1557803993,1557901408,1558063476,1558143711; Hm_lvt_080836300300be57b7f34f4b3e97d911=1558329620; Hm_lvt_06e9734f33e7ff39eccc218a7043f30f=1557306234,1558345666; PHPSESSID=3djlasanb0fe4g55k6qhipsjq4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.1.144:1161/admin/check/cost?addtabs=1',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => '192.168.1.144:1161',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+  'sort' => 'id',
+  'order' => 'desc',
+  'offset' => '0',
+  'limit' => '10',
+  'filter' => '{}',
+  'op' => '{}',
+  '_' => '1558939547669',
+)
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin/lang/zh-cn/check/cost.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\check\Cost->index[ D:\WWW\fastadmin\application\admin\controller\check\Cost.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000501s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.588075s ] mysql:host=pipiyaode.mysql.rds.aliyuncs.com;dbname=fa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.302038s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.347545s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.231529s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.084011s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.051506s ] mysql:host=pipiyaode.mysql.rds.aliyuncs.com;dbname=fa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_check_info` [ RunTime:0.063008s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_check_info` WHERE  `status` = 2 ORDER BY `id` DESC LIMIT 1 [ RunTime:0.059008s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_check_info` ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.041005s ]
+---------------------------------------------------------------
+[ 2019-05-27T14:46:18+08:00 ] 192.168.1.144 GET 192.168.1.144:1161/admin/check/cost/cost/ids/6?addtabs=1
+[运行时间：11.038902s] [吞吐率：0.09req/s] [内存消耗：3,407.37kb] [文件加载：138]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.003000s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003000s ]
+[ info ] [ LANG ] D:\WWW\fastadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'check.cost',
+    2 => 'cost',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'uid=1; token=4be6253f-bdcc-450c-ab55-6936db486c16; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1557803993,1557901408,1558063476,1558143711; Hm_lvt_080836300300be57b7f34f4b3e97d911=1558329620; Hm_lvt_06e9734f33e7ff39eccc218a7043f30f=1557306234,1558345666; PHPSESSID=3djlasanb0fe4g55k6qhipsjq4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.1.144:1161/admin/check/cost/cost/ids/6?ref=addtabs',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => '192.168.1.144:1161',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+  'ids' => '6',
+)
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002501s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin/lang/zh-cn/check/cost.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.126016s ] mysql:host=pipiyaode.mysql.rds.aliyuncs.com;dbname=fa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.054007s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.040505s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.032504s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.033504s ]
+---------------------------------------------------------------
+[ 2019-05-27T14:47:27+08:00 ] 192.168.1.144 GET 192.168.1.144:1161/admin/pay/order?addtabs=1
+[运行时间：0.222529s] [吞吐率：4.49req/s] [内存消耗：3,458.21kb] [文件加载：138]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.003000s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003000s ]
+[ info ] [ LANG ] D:\WWW\fastadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'pay.order',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'uid=1; token=4be6253f-bdcc-450c-ab55-6936db486c16; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1557803993,1557901408,1558063476,1558143711; Hm_lvt_080836300300be57b7f34f4b3e97d911=1558329620; Hm_lvt_06e9734f33e7ff39eccc218a7043f30f=1557306234,1558345666; PHPSESSID=3djlasanb0fe4g55k6qhipsjq4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.1.144:1161/admin/pay/order?ref=addtabs',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => '192.168.1.144:1161',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+)
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002001s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin/lang/zh-cn/pay/order.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\pay\Order->index[ D:\WWW\fastadmin\application\admin\controller\pay\Order.php ]
+[ info ] [ VIEW ] D:\WWW\fastadmin\public/../application/admin\view\pay\order\index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'typeList',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000000s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.042005s ] mysql:host=pipiyaode.mysql.rds.aliyuncs.com;dbname=fa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.013502s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.017002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.013502s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.015502s ]
+[ sql ] [ SQL ] SELECT `group_id` FROM `fa_auth_group_access` WHERE  `uid` = 1 LIMIT 1 [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_wk_user` [ RunTime:0.016002s ]
+[ sql ] [ SQL ] SELECT `id` FROM `fa_wk_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.012002s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `fa_auth_rule` WHERE  `name` = 'pay/order' LIMIT 1 [ RunTime:0.018002s ]
+---------------------------------------------------------------
+[ 2019-05-27T14:47:27+08:00 ] 192.168.1.144 GET 192.168.1.144:1161/admin/ajax/lang?callback=define&controllername=pay.order&v=1558939647
+[运行时间：0.051006s] [吞吐率：19.61req/s] [内存消耗：2,650.19kb] [文件加载：130]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.002000s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002000s ]
+[ info ] [ LANG ] D:\WWW\fastadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'uid=1; token=4be6253f-bdcc-450c-ab55-6936db486c16; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1557803993,1557901408,1558063476,1558143711; Hm_lvt_080836300300be57b7f34f4b3e97d911=1558329620; Hm_lvt_06e9734f33e7ff39eccc218a7043f30f=1557306234,1558345666; PHPSESSID=3djlasanb0fe4g55k6qhipsjq4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.1.144:1161/admin/pay/order?addtabs=1',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'connection' => 'close',
+  'host' => '192.168.1.144:1161',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'pay.order',
+  'v' => '1558939647',
+)
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001500s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ D:\WWW\fastadmin\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin/lang/zh-cn/pay/order.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000500s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-05-27T14:47:28+08:00 ] 192.168.1.144 GET 192.168.1.144:1161/admin/pay/order/index?addtabs=1&sort=id&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1558939647474
+[运行时间：0.315040s] [吞吐率：3.17req/s] [内存消耗：3,662.42kb] [文件加载：144]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.004000s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004000s ]
+[ info ] [ LANG ] D:\WWW\fastadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'pay.order',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'uid=1; token=4be6253f-bdcc-450c-ab55-6936db486c16; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1557803993,1557901408,1558063476,1558143711; Hm_lvt_080836300300be57b7f34f4b3e97d911=1558329620; Hm_lvt_06e9734f33e7ff39eccc218a7043f30f=1557306234,1558345666; PHPSESSID=3djlasanb0fe4g55k6qhipsjq4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.1.144:1161/admin/pay/order?addtabs=1',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => '192.168.1.144:1161',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+  'sort' => 'id',
+  'order' => 'desc',
+  'offset' => '0',
+  'limit' => '10',
+  'filter' => '{}',
+  'op' => '{}',
+  '_' => '1558939647474',
+)
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002000s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\WWW\fastadmin\public/../application/admin/lang/zh-cn/pay/order.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\pay\Order->index[ D:\WWW\fastadmin\application\admin\controller\pay\Order.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000000s ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @response_send [ RunTime:0.000500s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.022503s ] mysql:host=pipiyaode.mysql.rds.aliyuncs.com;dbname=fa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.012502s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.012502s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.018503s ]
+[ sql ] [ SQL ] SELECT `group_id` FROM `fa_auth_group_access` WHERE  `uid` = 1 LIMIT 1 [ RunTime:0.015002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_wk_user` [ RunTime:0.015002s ]
+[ sql ] [ SQL ] SELECT `id` FROM `fa_wk_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.011502s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.034004s ] mysql:host=pipiyaode.mysql.rds.aliyuncs.com;dbname=fa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_wk_order` [ RunTime:0.016502s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_wk_order` `order` LEFT JOIN `fa_wk_user` `wkuser` ON `order`.`user_id`=`wkuser`.`id` WHERE  (  1=1 ) ORDER BY `order`.`id` DESC LIMIT 1 [ RunTime:0.014002s ]
+[ sql ] [ SQL ] SELECT `order`.`id`,`order`.`order_id`,`order`.`unique_order_id`,`order`.`user_id`,`order`.`leader_id`,`order`.`type`,`order`.`order_amount`,`order`.`goods_detail`,`order`.`goods_title`,`order`.`user_in`,`order`.`agent_in`,`order`.`platform_in`,`order`.`yeepay_in`,`order`.`order_status`,`order`.`residual_amount`,`order`.`divide_rate`,`order`.`add_time`,`order`.`update_time`,`order`.`sn`,wkuser.id AS wkuser__id,wkuser.type AS wkuser__type,wkuser.industry AS wkuser__industry,wkuser.bank_card AS wkuser__bank_card,wkuser.alipay AS wkuser__alipay,wkuser.wxpay AS wkuser__wxpay,wkuser.user_name AS wkuser__user_name,wkuser.password AS wkuser__password,wkuser.phone AS wkuser__phone,wkuser.status AS wkuser__status,wkuser.leader_id AS wkuser__leader_id,wkuser.add_time AS wkuser__add_time,wkuser.divide_rate AS wkuser__divide_rate,wkuser.update_time AS wkuser__update_time,wkuser.info AS wkuser__info,wkuser.merchant_no AS wkuser__merchant_no,wkuser.contract_no AS wkuser__contract_no,wkuser.license AS wkuser__license FROM `fa_wk_order` `order` LEFT JOIN `fa_wk_user` `wkuser` ON `order`.`user_id`=`wkuser`.`id` WHERE  (  1=1 ) ORDER BY `order`.`id` DESC LIMIT 0,10 [ RunTime:0.022503s ]
+[ sql ] [ SQL ] SELECT `group_id` FROM `fa_auth_group_access` WHERE  `uid` = 1 LIMIT 1 [ RunTime:0.012002s ]
