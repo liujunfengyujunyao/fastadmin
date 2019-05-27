@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:76:"D:\WWW\fastadmin\public/../application/admin\view\pay\account\paymethod.html";i:1558934846;s:59:"D:\WWW\fastadmin\application\admin\view\layout\default.html";i:1557482263;s:56:"D:\WWW\fastadmin\application\admin\view\common\meta.html";i:1557482263;s:58:"D:\WWW\fastadmin\application\admin\view\common\script.html";i:1557482263;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:76:"D:\WWW\fastadmin\public/../application/admin\view\pay\account\paymethod.html";i:1558957319;s:59:"D:\WWW\fastadmin\application\admin\view\layout\default.html";i:1557482263;s:56:"D:\WWW\fastadmin\application\admin\view\common\meta.html";i:1557482263;s:58:"D:\WWW\fastadmin\application\admin\view\common\script.html";i:1557482263;}*/ ?>
 <!DOCTYPE html>
 <html lang="<?php echo $config['language']; ?>">
     <head>
@@ -58,16 +58,40 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
     <style>
-        .box{width: 400px;height: 400px;margin: 300px auto;}
-        button{display: block;width: 200px;height: 50px;outline-style: none;border: 0 none;color: #fff;font-size: 16px;border-radius: 10px}
-        .weixinbtn{background-color: #2a9e38;}
-        .zhifubtn{background-color: #1f9fdb;margin-top: 50px}
+      .box {
+        width: 400px;
+        height: 400px;
+        margin: 300px auto;
+        background-color: #ccc;
+        text-align: center
+      }
+      button {
+        width: 150px;
+        height: 50px;
+        outline-style: none;
+        border: 0 none;
+        color: #fff;
+        font-size: 16px;
+        border-radius: 10px;
+      }
+      .weixinbtn {
+        background-color: #2a9e38
+      }
+      .zhifubtn {
+        background-color: #1f9fdb;
+      }
+      .setprice{margin-top: 20px}
+      input{height: 40px;width: 200px;font-size: 16px;padding-left: 10px}
     </style>
   </head>
   <body>
     <div class="box">
+      <div style="height:200px" id="erweima"></div>
       <button class="weixinbtn">微信支付</button>
       <button class="zhifubtn">支付宝支付</button>
+      <div class="setprice">
+        设置金额: <input id="money" type="text">
+      </div>
     </div>
   </body>
 </html>

@@ -69,6 +69,42 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
         edit: function () {
             Controller.api.bindevent();
         },
+        paymethod:function () {
+
+
+            $(document).ready(function(){
+                $('.weixinbtn').click(function(){
+                    var amount=$('#money').val();
+                    var query = new Object();
+                    query.amount=amount;
+                    query.type = 1;
+                    $.ajax({
+                        url:"pay/account/paymethod",
+                        async:false,//同步 非异步
+                        data:query,
+                        type:"POST",
+                        dataType:"json",
+                        success:function(result){
+                            res = result;
+                            $('#erweima').html(res);
+                        },error:function(){
+                            alert('失败');
+                        }
+                    });
+
+                });
+            });
+            // $(".weixinbtn").on("click",function(){
+            //     var amount = $("#money").val();
+            //
+            //     // alert(amount);
+            //     Fast.api.ajax({
+            //         url:'pay/account/paymethod',
+            //         data:{status:1,amount:amount,cost:2222}
+            //     });
+            // });
+        },
+
         api: {
             bindevent: function () {
                 Form.api.bindevent($("form[role=form]"));

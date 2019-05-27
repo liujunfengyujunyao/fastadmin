@@ -3,27 +3,25 @@
 namespace app\admin\controller\pay;
 
 use app\common\controller\Backend;
-use app\admin\model\Admin;
 use think\Db;
 /**
  * 
  *
  * @icon fa fa-circle-o
  */
-//用户端查账
-class Account extends Backend
+class Merchants extends Backend
 {
     
     /**
-     * Account模型对象
-     * @var \app\admin\model\pay\Account
+     * Merchants模型对象
+     * @var \app\admin\model\pay\Merchants
      */
     protected $model = null;
 
     public function _initialize()
     {
         parent::_initialize();
-        $this->model = new \app\admin\model\pay\Account;
+        $this->model = new \app\admin\model\pay\Merchants;
         $this->view->assign("typeList", $this->model->getTypeList());
     }
     
@@ -41,9 +39,7 @@ class Account extends Backend
     {
         //当前是否为关联查询
         $this->relationSearch = false;
-        $admin = Admin::get($this->auth->id);
-        $wk_id = $admin['wk_id'];
-        $rule['user_id'] = ['eq',$wk_id];
+        $status['status'] = ['eq',2];//通过易宝审核
         //设置过滤方法
         $this->request->filter(['strip_tags']);
         if ($this->request->isAjax())
@@ -55,20 +51,20 @@ class Account extends Backend
             }
             list($where, $sort, $order, $offset, $limit) = $this->buildparams();
             $total = $this->model
-                    ->where($rule)
+                    ->where($status)
                     ->where($where)
                     ->order($sort, $order)
                     ->count();
 
             $list = $this->model
-                    ->where($rule)
+                    ->where($status)
                     ->where($where)
                     ->order($sort, $order)
                     ->limit($offset, $limit)
                     ->select();
 
             foreach ($list as $row) {
-                $row->visible(['id','order_id','order_status','unique_order_id','type','order_amount','update_time']);
+                $row->visible(['uid','name','mobile','email','id_card','type','update_time']);
                 
             }
             $list = collection($list)->toArray();
@@ -78,50 +74,45 @@ class Account extends Backend
         }
         return $this->view->fetch();
     }
-    //退款
-    public function refund()
+
+    public function detail()
     {
-        $order_id = request()->param('ids');
-        if ($this->request->isPost()) {
+        $this->model = new \app\admin\model\Order;
+//            halt(11111111111);
+//        dump(request()->param());
 
-            $params = request()->param();
+
+        if ($this->request->isAjax()){
+
+            $addtabs= request()->param('addtabs');
+
+            $admin_id = substr($addtabs,strripos($addtabs,"=")+1);//截取等号后面的
+
+            $admin = DB::name('admin')->where(['id'=>$admin_id])->find();
+
+            $wk = DB::name('wk_user')->where(['id'=>$admin['wk_id']])->find();
+            list($where, $sort, $order, $offset, $limit) = $this->buildparams();
+            $list = $this->model
+                ->where(['user_id'=>$wk['id']])
+                ->order($sort, $order)
+                ->limit($offset,$limit)
+                ->select();
+            $total = $this->model
+                ->where(['user_id'=>$wk['id']])
+                ->order($sort, $order)
+                ->count();
 
 
-            if ($params) {
+          foreach ($list as $row) {
+            $row->visible(['id','order_id','unique_order_id','user_id','leader_id','type','order_amount','goods_detail','goods_title','user_in','agent_in','platform_in','yeepay_in','order_status','residual_amount','devide_rate','add_time','update_time','sn']);
 
-                $params = $this->preExcludeFields($params);//过滤
-//                $result = false;
-                Db::startTrans();
-//                $api = ;//调用接口
-                $order = $this->model->where(['id'=>$params['ids']])->find();
-                if($order['order_amount']<$params['refund_amount'] || $order['order_status'] !== 2){
-                    $this->error("退款金额过大");
-                }
-                $result = $this->model->where(['id'=>$params['ids']])->update(['order_status'=>3,'update_time'=>time()]);
-                if ($result !== false) {
-                    $this->success('退款成功','admin/pay/account');
-                } else {
-                    $this->error(__('No rows were updated'));
-                }
-            }
-            $this->error(__('Parameter %s can not be empty', ''));
         }
-        $this->view->assign('order_id',$order_id);
-        return $this->view->fetch();
-    }
-
-    //收款
-    public function paymethod()
-    {
-
-        if($this->request->isAjax()){
-
-            $params = request()->param('amount');
-            $result = $params;
+            $list = collection($list)->toArray();//$list是个对象  转化为数组
+//            halt($list);
+            $result = array("total" => $total,"rows" => $list);
             return json($result);
-
         }
         return $this->view->fetch();
-    }
 
+    }
 }

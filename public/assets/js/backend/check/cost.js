@@ -42,7 +42,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                                 },{
                                     name: '设置费率',
                                     title: __('设置费率'),
-                                    classname: 'btn btn-xs btn-primary btn-addtabs',
+                                    classname: 'btn btn-xs btn-primary btn-dialog',
                                     icon: 'fa fa-strikethrough',
                                     url: 'check/cost/cost',
                                 }],

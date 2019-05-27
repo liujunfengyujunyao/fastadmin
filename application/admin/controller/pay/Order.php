@@ -80,6 +80,7 @@ class Order extends Backend
                 $row->getRelation('wkuser')->visible(['id','type','user_name']);
             }
             $list = collection($list)->toArray();//$list是个对象  转化为数组
+//            halt($list);
 //            foreach($list as $key => &$value){
 //                $value['last_time'] = $value['update_time']+7200;
 //            }
