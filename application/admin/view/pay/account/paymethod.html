@@ -10,8 +10,10 @@
         width: 400px;
         height: 400px;
         margin: 300px auto;
-        background-color: #ccc;
-        text-align: center
+        background-color: #f1f4f6;
+        text-align: center;
+        border:0 none;
+        box-shadow: none;
       }
       button {
         width: 150px;
@@ -30,11 +32,14 @@
       }
       .setprice{margin-top: 20px}
       input{height: 40px;width: 200px;font-size: 16px;padding-left: 10px}
+      /*#erweima{display:none}*/
     </style>
   </head>
   <body>
     <div class="box">
-      <div style="height:200px" id="erweima"></div>
+      <div style="height:200px" id="erweima">
+        <img src="" alt="" id="qrcode" style="width:200px">
+      </div>
       <button class="weixinbtn">微信支付</button>
       <button class="zhifubtn">支付宝支付</button>
       <div class="setprice">
@@ -43,3 +48,5 @@
     </div>
   </body>
 </html>
+
+

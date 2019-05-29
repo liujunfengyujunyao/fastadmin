@@ -1,4 +1,4 @@
-define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefined, Backend, Table, Form) {
+define(['jquery', 'bootstrap', 'backend', 'table', 'form','jquery-code'], function ($, undefined, Backend, Table, Form,jquery_code) {
 
     var Controller = {
         index: function () {
@@ -72,6 +72,9 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
         paymethod:function () {
 
 
+   //
+   //      //
+   //      //
             $(document).ready(function(){
                 $('.weixinbtn').click(function(){
                     var amount=$('#money').val();
@@ -85,8 +88,9 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                         type:"POST",
                         dataType:"json",
                         success:function(result){
-                            res = result;
-                            $('#erweima').html(res);
+                            console.log(result);
+                            var path = 'data:image/png;base64,'+result.data;
+                            $("#qrcode").attr('src',path)
                         },error:function(){
                             alert('失败');
                         }
@@ -94,15 +98,15 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
 
                 });
             });
-            // $(".weixinbtn").on("click",function(){
-            //     var amount = $("#money").val();
-            //
-            //     // alert(amount);
-            //     Fast.api.ajax({
-            //         url:'pay/account/paymethod',
-            //         data:{status:1,amount:amount,cost:2222}
-            //     });
-            // });
+   //      //     // $(".weixinbtn").on("click",function(){
+   //      //     //     var amount = $("#money").val();
+   //      //     //
+   //      //     //     // alert(amount);
+   //      //     //     Fast.api.ajax({
+   //      //     //         url:'pay/account/paymethod',
+   //      //     //         data:{status:1,amount:amount,cost:2222}
+   //      //     //     });
+   //      //     // });
         },
 
         api: {

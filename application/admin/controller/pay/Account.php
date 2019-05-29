@@ -117,11 +117,29 @@ class Account extends Backend
         if($this->request->isAjax()){
 
             $params = request()->param('amount');
-            $result = $params;
+
+//            $data = action('api/pay/pay2',['type'=>1,'amount'=>0.01,'user_id'=>2,'goods_name'=>'goods','sn'=>1]);
+            $result = $this->qrcode($params);
+
             return json($result);
 
         }
         return $this->view->fetch();
+    }
+    public function qrcode($url)
+    {
+        vendor('phpqrcode.phpqrcode');
+        $object=new \QRcode();
+        ob_start();
+
+        $object->png($url,false,3,10,2);
+        $imageString = base64_encode(ob_get_contents());
+        ob_end_clean();
+        $data = array(
+            'code'=>200,
+            'data'=>$imageString
+        );
+        return $data;
     }
 
 }

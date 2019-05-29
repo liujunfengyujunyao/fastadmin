@@ -18,7 +18,7 @@ header('Access-Control-Allow-Methods:POST,GET,OPTIONS,DELETE'); // 允许请求�
 header('Access-Control-Allow-Credentials: true'); // 设置是否允许发送 cookies
 //header('Access-Control-Allow-Origin:http://bs.goldenbrother.cn');
 header('Access-Control-Allow-Origin:*');
-class Pay extends Backend{
+class Pay extends Controller{
 
 
     public function __construct(){
@@ -54,7 +54,7 @@ class Pay extends Backend{
         ];
 //            halt($data);
         $result = json_curl($url, $data);
-        halt($result);
+
         $arr = json_decode($result, true);
         $url = $arr['url'];
         return $this->qrcode($url);
@@ -63,14 +63,14 @@ class Pay extends Backend{
 
     //申请支付链接
     public function pay(){
-
+//halt(2);
         $type = input('post.type');//1支付宝2微信
         $user_id = input('post.userid')?:2;
         $amount = input('post.amount');//订单金额
         $goods_name = input('post.goods_name')?:'goods';
         $payType = array('1'=>'ALIPAY','2'=>'WECHAT');
         $sn = input('post.sn');//设备sn
-halt($sn);
+//halt($sn);
         $request = new \YopRequest("OPR:".$this->parentMerchantNo, $this->private_key, "https://open.yeepay.com/yop-center",$this->yop_public_key);
 
         if($user_id == 1){$user_id = 2;}
@@ -345,6 +345,11 @@ halt($sn);
         file_put_contents('./callback.log', $log, FILE_APPEND);
         echo "SUCCESS";
 
+    }
+
+    public function ttt()
+    {
+        return 222;
     }
 
 }

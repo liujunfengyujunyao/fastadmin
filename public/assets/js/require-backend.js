@@ -51,11 +51,13 @@ require.config({
         'selectpage': '../libs/fastadmin-selectpage/selectpage',
         'citypicker': '../libs/fastadmin-citypicker/dist/js/city-picker.min',
         'citypicker-data': '../libs/fastadmin-citypicker/dist/js/city-picker.data',
+        'jquery-code': '../code',
     },
     // shim依赖配置
     shim: {
         'addons': ['backend'],
         'bootstrap': ['jquery'],
+        'jquery-code': ['jquery'],
         'bootstrap-table': {
             deps: [
                 'bootstrap',

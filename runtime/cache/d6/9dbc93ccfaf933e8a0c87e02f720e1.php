@@ -1,0 +1,4 @@
+<?php
+//000000000000
+ exit();?>
+a:10:{s:2:"id";i:7;s:4:"type";s:6:"文字";s:4:"name";s:10:"friendlink";s:5:"title";s:13:"友情链接 ";s:5:"image";s:0:"";s:3:"url";s:0:"";s:7:"content";s:459:"<a href="https://www.fastadmin.net" title="FastAdmin - 极速后台开发框架">FastAdmin</a> <a href="https://gitee.com" title="FastAdmin码云仓库">码云</a> <a href="https://github.com" title="FastAdminGithub仓库">Github</a> <a href="https://doc.fastadmin.net" title="FastAdmin文档 - 极速后台开发框架">FastAdmin文档</a> <a href="https://ask.fastadmin.net" title="FastAdmin问答社区 - 极速后台开发框架">FastAdmin问答社区</a>";s:10:"createtime";i:1553606219;s:10:"updatetime";i:1553757863;s:6:"status";s:6:"normal";}

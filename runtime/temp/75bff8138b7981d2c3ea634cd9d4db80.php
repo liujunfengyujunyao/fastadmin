@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:76:"D:\WWW\fastadmin\public/../application/admin\view\pay\account\paymethod.html";i:1558957319;s:59:"D:\WWW\fastadmin\application\admin\view\layout\default.html";i:1557482263;s:56:"D:\WWW\fastadmin\application\admin\view\common\meta.html";i:1557482263;s:58:"D:\WWW\fastadmin\application\admin\view\common\script.html";i:1557482263;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:76:"D:\WWW\fastadmin\public/../application/admin\view\pay\account\paymethod.html";i:1559102566;s:59:"D:\WWW\fastadmin\application\admin\view\layout\default.html";i:1557482263;s:56:"D:\WWW\fastadmin\application\admin\view\common\meta.html";i:1557482263;s:58:"D:\WWW\fastadmin\application\admin\view\common\script.html";i:1559031184;}*/ ?>
 <!DOCTYPE html>
 <html lang="<?php echo $config['language']; ?>">
     <head>
@@ -62,8 +62,10 @@
         width: 400px;
         height: 400px;
         margin: 300px auto;
-        background-color: #ccc;
-        text-align: center
+        background-color: #f1f4f6;
+        text-align: center;
+        border:0 none;
+        box-shadow: none;
       }
       button {
         width: 150px;
@@ -82,11 +84,14 @@
       }
       .setprice{margin-top: 20px}
       input{height: 40px;width: 200px;font-size: 16px;padding-left: 10px}
+      /*#erweima{display:none}*/
     </style>
   </head>
   <body>
     <div class="box">
-      <div style="height:200px" id="erweima"></div>
+      <div style="height:200px" id="erweima">
+        <img src="" alt="" id="qrcode" style="width:200px">
+      </div>
       <button class="weixinbtn">微信支付</button>
       <button class="zhifubtn">支付宝支付</button>
       <div class="setprice">
@@ -96,6 +101,8 @@
   </body>
 </html>
 
+
+
                             </div>
                         </div>
                     </div>
@@ -103,5 +110,6 @@
             </div>
         </div>
         <script src="/assets/js/require<?php echo \think\Config::get('app_debug')?'':'.min'; ?>.js" data-main="/assets/js/require-backend<?php echo \think\Config::get('app_debug')?'':'.min'; ?>.js?v=<?php echo $site['version']; ?>"></script>
+
     </body>
 </html>

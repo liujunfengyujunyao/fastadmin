@@ -26,5 +26,7 @@ return array (
     '/s' => 'cms/search/index',
     '/c/[:diyname]' => 'cms/channel/index',
     '/d/[:diyname]' => 'cms/diyform/index',
+    '/qrcode$' => 'qrcode/index/index',
+    '/qrcode/build$' => 'qrcode/index/build',
   ),
 );

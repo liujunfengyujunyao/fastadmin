@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:66:"D:\WWW\fastadmin\public/../application/admin\view\index\index.html";i:1557482263;s:56:"D:\WWW\fastadmin\application\admin\view\common\meta.html";i:1557482263;s:58:"D:\WWW\fastadmin\application\admin\view\common\header.html";i:1557482263;s:56:"D:\WWW\fastadmin\application\admin\view\common\menu.html";i:1557482263;s:59:"D:\WWW\fastadmin\application\admin\view\common\control.html";i:1557482263;s:58:"D:\WWW\fastadmin\application\admin\view\common\script.html";i:1557482263;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:66:"D:\WWW\fastadmin\public/../application/admin\view\index\index.html";i:1557482263;s:56:"D:\WWW\fastadmin\application\admin\view\common\meta.html";i:1557482263;s:58:"D:\WWW\fastadmin\application\admin\view\common\header.html";i:1557482263;s:56:"D:\WWW\fastadmin\application\admin\view\common\menu.html";i:1557482263;s:59:"D:\WWW\fastadmin\application\admin\view\common\control.html";i:1557482263;s:58:"D:\WWW\fastadmin\application\admin\view\common\script.html";i:1559031184;}*/ ?>
 <!DOCTYPE html>
 <html lang="<?php echo $config['language']; ?>">
     <head>
@@ -298,5 +298,6 @@
 
         <!-- 加载JS脚本 -->
         <script src="/assets/js/require<?php echo \think\Config::get('app_debug')?'':'.min'; ?>.js" data-main="/assets/js/require-backend<?php echo \think\Config::get('app_debug')?'':'.min'; ?>.js?v=<?php echo $site['version']; ?>"></script>
+
     </body>
 </html>
