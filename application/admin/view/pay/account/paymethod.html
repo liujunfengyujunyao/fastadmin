@@ -1,52 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
-    <style>
-      .box {
-        width: 400px;
-        height: 400px;
-        margin: 300px auto;
-        background-color: #f1f4f6;
-        text-align: center;
-        border:0 none;
-        box-shadow: none;
-      }
-      button {
-        width: 150px;
-        height: 50px;
-        outline-style: none;
-        border: 0 none;
-        color: #fff;
-        font-size: 16px;
-        border-radius: 10px;
-      }
-      .weixinbtn {
-        background-color: #2a9e38
-      }
-      .zhifubtn {
-        background-color: #1f9fdb;
-      }
-      .setprice{margin-top: 20px}
-      input{height: 40px;width: 200px;font-size: 16px;padding-left: 10px}
-      /*#erweima{display:none}*/
-    </style>
-  </head>
-  <body>
-    <div class="box">
-      <div style="height:200px" id="erweima">
-        <img src="" alt="" id="qrcode" style="width:200px">
-      </div>
-      <button class="weixinbtn">微信支付</button>
-      <button class="zhifubtn">支付宝支付</button>
-      <div class="setprice">
-        设置金额: <input id="money" type="text">
-      </div>
-    </div>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Document</title>
+  <style>
+    .box {
+      margin: 150px auto;
+      background-color: #f1f4f6;
+      text-align: center;
+      border: 0 none;
+      box-shadow: none
+    }
+    button {
+      width: 120px;
+      height: 40px;
+      outline-style: none;
+      border: 0 none;
+      color: #fff;
+      font-size: 16px;
+      border-radius: 10px;
+    }
+    .weixinbtn {
+      background-color: #2a9e38;
+      margin-right: 70px;
+      margin-top:30px;
+    }
+    .zhifubtn {
+      background-color: #1f9fdb;
+    }
+    .setprice {
+      font-size: 18px
+    }
+    input {
+      height: 40px;
+      width: 200px;
+      font-size: 16px;
+      padding-left: 10px;
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+<div class="box">
+  <div class="setprice">设置收款金额: <input id="money" type="number" oninput="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')"></div>
+  <div style="color:red;padding-top:5px;padding-left: 60px;display: none" class="warntext">*设置金额的值必须大于零</div>
+  <button class="weixinbtn">微信支付</button>
+  <button class="zhifubtn">支付宝支付</button>
+  <div style="height:200px;margin-top:20px" id="erweima">
+    <div style="font-size:14px;margin-bottom:15px;display: none" id="weixinPay">请使用微信扫一扫支付</div>
+    <div style="font-size:14px;margin-bottom:15px;display: none" id="zhifuPay">请使用支付宝扫一扫支付</div>
+    <img src="" alt="" style="width: 200px" id="qrcode" />
+  </div>
+</div>
+</body>
 </html>
-
-

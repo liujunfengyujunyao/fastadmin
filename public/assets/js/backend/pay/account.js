@@ -70,43 +70,73 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form','jquery-code'], functi
             Controller.api.bindevent();
         },
         paymethod:function () {
-
-
-   //
-   //      //
-   //      //
-            $(document).ready(function(){
-                $('.weixinbtn').click(function(){
-                    var amount=$('#money').val();
-                    var query = new Object();
-                    query.amount=amount;
-                    query.type = 1;
-                    $.ajax({
-                        url:"pay/account/paymethod",
-                        async:false,//同步 非异步
-                        data:query,
-                        type:"POST",
-                        dataType:"json",
-                        success:function(result){
-                            console.log(result);
-                            var path = 'data:image/png;base64,'+result.data;
-                            $("#qrcode").attr('src',path)
-                        },error:function(){
-                            alert('失败');
-                        }
-                    });
-
+            $(".weixinbtn").click(function() {
+                if($('#money').val().trim()===''||$('#money').val().trim()<=0){
+                    alert('金额必须是不能为空的大于0的数值');
+                    return(false)
+                }
+                var amount = $("#money").val();
+                var query = new Object();
+                query.amount = amount;
+                query.type = 2;
+                $.ajax({
+                    url: "pay/account/paymethod",
+                    async: false, //同步 非异步
+                    data: query,
+                    type: "POST",
+                    dataType: "json",
+                    success: function(result) {
+                        var path = "data:image/png;base64," + result.data;
+                        $("#qrcode").attr("src", path);
+                        $("#weixinPay").css("display", "block");
+                        $("#zhifuPay").css("display", "none");
+                    },
+                    error: function() {
+                        alert("失败");
+                    }
                 });
             });
-   //      //     // $(".weixinbtn").on("click",function(){
-   //      //     //     var amount = $("#money").val();
-   //      //     //
-   //      //     //     // alert(amount);
-   //      //     //     Fast.api.ajax({
-   //      //     //         url:'pay/account/paymethod',
-   //      //     //         data:{status:1,amount:amount,cost:2222}
-   //      //     //     });
-   //      //     // });
+            $(".zhifubtn").click(function() {
+                if($('#money').val().trim()===''||$('#money').val().trim()<=0){
+                    alert('金额必须是不能为空的大于0的数值');
+                    return(false)
+                }
+                var amount = $("#money").val();
+                var query = new Object();
+                query.amount = amount;
+                query.type = 1;
+                $.ajax({
+                    url: "pay/account/paymethod",
+                    async: false, //同步 非异步
+                    data: query,
+                    type: "POST",
+                    dataType: "json",
+                    success: function(result) {
+                        var path = "data:image/png;base64," + result.data;
+                        $("#qrcode").attr("src", path);
+                        $("#zhifuPay").css("display", "block");
+                        $("#weixinPay").css("display", "none");
+                    },
+                    error: function() {
+                        alert("失败");
+                    }
+                });
+            });
+            $("#money").blur(function() {
+                let reg = /^([1-9]\d*(\.\d*[1-9])?)|(0\.\d*[1-9])$/;
+                if ($('#money').val().trim().length === 0) {
+                    $('.warntext').css('display','none')
+                    console.log('1')
+                } else if (
+                    !reg.test($('#money').val().trim())
+                ) {
+                    console.log('2');
+                    $('.warntext').css('display','block')
+                } else {
+                    $('.warntext').css('display','none')
+                }
+                return true;
+            });
         },
 
         api: {

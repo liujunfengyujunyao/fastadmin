@@ -118,7 +118,7 @@ class Account extends Backend
 
             $params = request()->param('amount');
 
-//            $data = action('api/pay/pay2',['type'=>1,'amount'=>0.01,'user_id'=>2,'goods_name'=>'goods','sn'=>1]);
+
             $result = $this->qrcode($params);
 
             return json($result);
@@ -140,6 +140,12 @@ class Account extends Backend
             'data'=>$imageString
         );
         return $data;
+    }
+
+    public function ce()
+    {
+        $data = action('api/pay/pay2',['type'=>1,'amount'=>0.01,'user_id'=>2,'goods_name'=>'goods','sn'=>1]);
+        halt($data);
     }
 
 }
